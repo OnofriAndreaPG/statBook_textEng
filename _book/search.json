@@ -1,0 +1,1362 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Field Research Methods in Agriculture",
+    "section": "",
+    "text": "Preface\nThis website is associated to the book ‘Experimental methods in agriculture: an introduction with R’, published by Springer Nature in 2025, which is a simple, ‘non-mathematical’ introduction to the experimental design and basic data analyses for field experiments in agriculture and related disciplines. It focuses on small-plot experiments, which are the fundamental foundations of scientific progress in agriculture. Indeed, these experiments are used to evaluate and compare, e.g., innovative genotypes, agronomic practices, pesticides and other plant protection methods. You can visit the Springer publication website for the table of contents and sample chapters or to buy the whole book or any of its individual Chapters.\nThis web sites hosts additional material, which might turn out useful either for teaching purposes, or for delving a little deeper in some topics. Additional R codes, slides and other information is also provided in my blog, that hosts this e-book.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#statistical-software",
+    "href": "index.html#statistical-software",
+    "title": "Field Research Methods in Agriculture",
+    "section": "Statistical software",
+    "text": "Statistical software\nIn this website, as in the related book and hosting blog, datasets are analysed by using the R statistical software (R Core Team, 2024), within the RStudio environment (Posit team, 2024). Such choice was made for a number of reasons, including the fact that this language is very powerful and a lot of fun to work with. I am very much indebted to the whole community, who is working to ensure the wide availability of these tools and preserve their freeware nature.\nIn order to work through this website, you will need to have installed R, RStudio and the following packages (in alphabetical order): car (Fox and Weisberg 2019), drc (Ritz et al. 2019), emmeans (Lenth 2024), lme4 (Bates et al. 2015), lmerTest (Kuznetsova et al. 2017), MASS (Venables and Ripley 2002), multcomp (Hothorn et al. 2008), multcompView (Graves et al. 2024), SuppDists (Wheeler 2025) and statforbiology (Onofri 2025). This latter is the accompanying R package for this website and the associated blog (see later). The readers should install these packages from CRAN, before starting to work through this book. The installation can be done by using the ‘install packages’ entry in the ‘Tools’ menu in R Studio.\nIt is also important to mention that this book and the associated website (see later) are written in RMarkdown (Xie et al. 2018) with the bookdown (Xie 2024) and blogdown (Xie et al. 2017) packages; these are very useful and we feel very much indebted to the respective authors.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#dedication",
+    "href": "index.html#dedication",
+    "title": "Field Research Methods in Agriculture",
+    "section": "Dedication",
+    "text": "Dedication\nThis website is dedicated to the memory of my colleague and friend Dario Sacco (University of Torino, Italy). We started working together on a book project, and he was very eager to contribute to the first two Chapters in the earlier Italian version. Unfortunately, he had no luck and suddenly died far too early. This book is heavily based on the lengthy discussions we had during the statistics courses of the Italian Society of Agronomy, and the final result would have been much better if it had benefited from the continuing support and contributions from Dario.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "Field Research Methods in Agriculture",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nI would like to thank my Colleagues at the Department of Agriculture, Food, and Environmental Sciences (University of Perugia, Italy): it has been a long road together, and I am happy we walked it together. In particular, I would like to thank Dino Alberati, Egidio Ciriciofolo, Gino Covarelli, Marcello Guiducci, Euro Pannacci, and Francesco Tei, from whom I have learned most of the subtleties of the research work.\nThis book and website owe much to the countless questions, confusions, and concerns shared by my students. In striving to support their learning journey, I found the motivation to write more clearly, think more deeply, and explain more simply.\nLast but not least, I am deeply indebted to the R Core development team for the availability of the R language and environment, as well as for their efforts to maintain and preserve its freeware nature. I also want to mention that this book and its associated website are written in , using the and packages, which are three valuable additions to the R project, for which I am very much indebted.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Field Research Methods in Agriculture",
+    "section": "References",
+    "text": "References\n\n\nBates, D, M Mächler, B Bolker, S Walker\n(2015) Fitting linear\nmixed-effects models using lme4.\nJournal of Statistical Software 67, 1–48\n\n\nBraun-Blanquet, J (1964)\nPflanzensoziologie: Grundzüge der\nvegetationskunde. 3rd ed. Springer-Verlag, Vienna, New York\n\n\nCovarelli, G, A Onofri (1998) Effects\nof timing of weed removal and emergence in sugarbeet. EWRS\n\n\nCristaudo, A, A Restuccia, A Onofri, VL Giudice,\nF Gresta (2015) Species-area relationships and minimum area in\ncitrus grove weed communities. Plant Biosystems\n149, 337–345\n\n\nFox, J, S Weisberg (2019) An R companion to\napplied regressionThird Edition. Sage, Thousand Oaks\nCA\n\n\nGraves, S, H-P Piepho, LS with help from Sundar\nDorai-Raj (2024) multcompView:\nVisualizations of paired comparisons\n\n\nGraziani, F, A Onofri, E Pannacci, F Tei, M\nGuiducci (2012) Size and composition of weed seedbank in\nlong-term organic and conventional low-input cropping systems.\nEuropean Journal of Agronomy 39, 52–61\n\n\nHothorn, T, F Bretz, P Westfall (2008)\nSimultaneous inference in general parametric models. Biometrical\nJournal 50, 346–363\n\n\nKuehl, RO (2000) Design of\nexperiments: Statistical principles of research design and\nanalysis. Duxbury Press, Books\n\n\nKuznetsova, A, PB Brockhoff, RHB\nChristensen (2017) lmerTest package: Tests in linear mixed effects\nmodels. Journal of Statistical Software\n82, 1–26\n\n\nLe Clerg, EL, WH Leonard, AG Clark (1962)\nField plot technique. Burgess Publishing Company, USA\n\n\nLenth, RV (2024) Emmeans: Estimated\nmarginal means, aka least-squares means\n\n\nLigabue, M, A Onofri, F Ruozzi (2009) Le\nmigliori varietà di erba medica da seme.\nAgricoltura 84, 82–84\n\n\nMesgaran, MB, A Onofri, HR Mashhadi, RD\nCousens (2017) Water\navailability shifts the optimal temperatures for seed germination:\nA modelling approach. Ecological Modelling\n351, 87–95\n\n\nMonotti, M, A Onofri, E Gargano, C Selmi, A\nTagliaferri, L Craveri, D Severi, G Bruno, M Poli, G Bimbi, M Ginanni, E\nMoscheni, M Quattrucci, S Tavoletti, A Petrini, E Di Paolo, F Stagnari,\nG De Mastro, G Carboni, G Pruneddu, A Sarti, L Tonetti (2009)\nAzioni\ndi innovazione e ricerca a supporto del piano proteine vegetali:\nProteiche da granella. CRPA Editore, Reggio Emilia\n\n\nMuller-Dumbois, D, H Ellenberg (1974)\nCommunity sampling: The relevè method. Pages 45–66\nin Aims and methods of vegetation ecology. John Wiley &\nSons, Inc., Species/Area curves\n\n\nOnofri, A (1994) Applicazione di\nmodelli empirici di regressione non-lineare in ricerche di lotta alle\nmalerbe. Tesi di dottorato di ricerca in \"Produttività\ndelle piante coltivate\", VI ciclo, Universit...degli Studi di Perugia,\nIstituto di Agronomia generale e Coltivazioni erbacee, 138pp., Perugia\n\n\nOnofri, A (2025) Statforbiology:\nData analyses in agriculture and biology\n\n\nOnofri, A, E Ciriciofolo (2007) Using R to perform the\nAMMI analysis on agriculture variety trials. R\nNEWS 7, 14–19\n\n\nOnofri, A, L Covarelli, F Tei (1995)\nEfficacy of rimsulfuron and metribuzin against Solanum\nnigrum L. At different growth stages in tomato. ANPP,\nreprints\n\n\nOnofri, A, H-P Piepho, M Kozak (2019) Analysing censored data in\nagricultural research: A review with examples and software\ntips. Annals of Applied Biology 174, 3–13\n\n\nOnofri, A, F Tei (1994b) Influence of\napplication timing on the effectiveness of rimsulfuron against rhizome\nSorghum halepense (L.)\nPers. Università degli Studi di Perugia,\nreprints\n\n\nOnofri, A, F Tei (1994a) Competitive\nability and threshold levels for three broadleaf weed species in\nsunflower. Weed Research 34, 471–479\n\n\nPace, R, P Benincasa, ME Ghanem, M Quinet, S\nLutts (2012) Germination of\nuntreated and primed seeds in rapeseed (brassica napus var oleifera\ndel.) under salinity and low matric potential. Experimental\nAgriculture 48, 238–251\n\n\nPannacci, E, D Pettorossi, G Covarelli\n(2010) Allelopathic effects of sunflower\n(\\textit{Helianthus annuus} L.)\nextracts on seed germination and growth of\n\\textit{Sinapis alba} L.,\n\\textit{Triticum aestivum} L. And\n\\textit{Lolium multiflorum}\nLam. EWRS, Kaposvr (Hungary)\n\n\nPannacci, E, D Pettorossi, F Tei (2013)\nPhytotoxic effects of aqueous extracts of sunflower on seed germination\nand growth of Sinapis alba L.,\nTriticum aestivum L. And Lolium\nmultiflorum Lam. Allelopathy Journal\n32, 23\n\n\nPiepho, H-P (1998) Methods for comparing\nthe yield stability of cropping systems - A review.\nJournal of Agronomy and Crop Science 180,\n193–213\n\n\nRitz, C, SM Jensen, D Gerhard, JC\nStreibig (2019) Dose-response analysis using\nR. CRC Press, USA\n\n\nSadocchi, S (1987) Manuale di\nAnalisi statistica Multivariata£rd\nEdition. Franco Angeli Libri srl, Milano, Italy\n\n\nScavo, A, A Restuccia, S Lombardo, S Fontanazza,\nC Abbate, G Pandino, U Anastasi, A Onofri, G Mauromicale (2020)\nImproving soil\nhealth, weed management and nitrogen dynamics by Trifolium\nsubterraneum cover cropping. Agronomy for Sustainable\nDevelopment 40\n\n\nStagnari, F, A Onofri, P Codianni, M\nPisante (2013) Durum wheat varieties in N-deficient\nenvironments and organic farming: A comparison of yield, quality and\nstability performances. Plant Breeding 132,\n266–275\n\n\nStagnari, F, A Onofri, JJ Jemison, M\nMonotti (2007) Improved multivariate analyses to discriminate the\nbehaviour of faba bean varieties. Agronomy For Sustainable\nDevelopment 27, 387–397\n\n\nStalder, L, W Pestemer (1980)\nAvailability to plants of herbicide residues in soil. Part\nI: A rapid method for estiming potentially\navailable residues of herbicides. Weed Research\n20, 341–347\n\n\nToscano, S, T La Malfa, A Maio, E Bonanno, F\nCalderone, F Gresta (2026) Lettuce yield, quality and water\nproductivity as affected by deficit irrigation and superabsorbent\npolymer dose. Horticulture In press\n\n\nVenables, WN, BD Ripley (2002) Modern\napplied statistics with S4th ed. Springer, New York\n\n\nVischetti, C, M Marini, M Businelli, A\nOnofri (1996) The effect of temperature and co-applied\nherbicides on the degradation rate of phenmedipham, chloridazon and\nmetamitron in a clay loam soil in the laboratory. La Goliardica\nPavese, Piacenza\n\n\nW., N (1972) A short life test for\ncomparing a sample with previous accelerated test results.\nTechnometrics 14, 175–185\n\n\nWheeler, B (2025) SuppDists:\nSupplementary distributions\n\n\nXie, Y (2024) Bookdown: Authoring books and\ntechnical documents with r markdown\n\n\nXie, Y, JJ Allaire, G Grolemund (2018)\nR markdown: The\ndefinitive guide. Chapman; Hall/CRC, Boca Raton, Florida\n\n\nXie, Y, AP Hill, A Thomas (2017) Blogdown: Creating websites\nwith R markdown. Chapman; Hall/CRC, Boca Raton,\nFlorida",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "01-ScienceData.html",
+    "href": "01-ScienceData.html",
+    "title": "1  Science, data, and experiments",
+    "section": "",
+    "text": "Nothing to add, yet",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Science, data, and experiments</span>"
+    ]
+  },
+  {
+    "objectID": "02-ExperimentalLayOut.html",
+    "href": "02-ExperimentalLayOut.html",
+    "title": "2  The design of field experiments",
+    "section": "",
+    "text": "2.1 Suggestions to lay out proper field experiments\nIn order to lay-out a proper design and draw a correct map for a field experiment, it is necessary to consider the following items:\nLet’s consider, for example, the experiment described in the Exercise 7 of Chapter 2. The text of such an Exercise is as follows: You have been requested to design a breeding experiment with 16 wheat genotypes coded by using letters of the Roman alphabet. The aim is to determine which genotype is the best in a given environment. Write the experimental protocol, where you specify all the main elements of your project (subjects, variables, replicates, experimental design), and draw the field map. Consider a field measuring 400 m in length, 20 m in width and with the longer side aligned north-south. Sowing is carried out longitudinally, along the north-south axis, with a 2.5 m wide machine. The field is uniform along its longitudinal axis, although there is a significant transversal fertility gradient.\nHow should we design such an experiment? I’ll propose a stepwise solution (which is not at all the only possible solution!).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The design of field experiments</span>"
+    ]
+  },
+  {
+    "objectID": "02-ExperimentalLayOut.html#suggestions-to-lay-out-proper-field-experiments",
+    "href": "02-ExperimentalLayOut.html#suggestions-to-lay-out-proper-field-experiments",
+    "title": "2  The design of field experiments",
+    "section": "",
+    "text": "Length and width of the available space in the field\nSowing/working direction\nPresence of fertility gradients of any kinds\n\n\n\n\n2.1.1 Step 1\nLet’s start by projecting the size of a plot: wheat is to be regarded as a high-density crop (350-400 plants per square meter, in central Italy) and, thus, a plot of 20 m2 should be regarded as big enogh to obtain reliable yield data. Considering that the available sowing machine has a working width of 2.5 m, the most appropriate plot size should be 2.5 m in width and, consequently, 8 m in length.\n\n\n2.1.2 Step 2\nSecondly, we should project the size of the grid. Considering that the field is usually worked and sown along its longitudinal axis and that it is relatively uniform along this axis, it would be appropriate to lay out the plot with its long side along the working direction. A 16 \\(\\times\\) 4 grid would be appropriate, with four ‘vertical’ blocks (one beside the other, along the fertility gradient), so that all the plots in one block are located in the very same position along the fertility gradient. Such a grid should fit with no problem in the available space. The surrounding space could be used to sow winter wheat, to avoid border effects along the edges of the experiment.\n\n\n2.1.3 Step 3\nAllocate the genotypes to the plots, according to a Randomized Complete Block Design, so that there is one and only one replicate per genotype per block. In order to ease your mind, the package agricolae may provide significant help to randomised the genotypes and avoid errors (see code below). The final map could be as shown in the following Figure (the four blocks are in different colors).\n\nlibrary(agricolae)\ndes &lt;- design.rcbd(LETTERS[1:16], r = 4, seed = 1234)\ndes$sketch\n\n     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13] [,14]\n[1,] \"G\"  \"O\"  \"P\"  \"C\"  \"J\"  \"K\"  \"H\"  \"D\"  \"N\"  \"F\"   \"E\"   \"M\"   \"L\"   \"A\"  \n[2,] \"C\"  \"A\"  \"J\"  \"F\"  \"B\"  \"M\"  \"P\"  \"E\"  \"D\"  \"K\"   \"I\"   \"O\"   \"G\"   \"N\"  \n[3,] \"L\"  \"B\"  \"E\"  \"A\"  \"N\"  \"J\"  \"G\"  \"D\"  \"M\"  \"C\"   \"F\"   \"O\"   \"H\"   \"P\"  \n[4,] \"E\"  \"I\"  \"B\"  \"A\"  \"K\"  \"P\"  \"O\"  \"G\"  \"D\"  \"M\"   \"L\"   \"H\"   \"J\"   \"N\"  \n     [,15] [,16]\n[1,] \"I\"   \"B\"  \n[2,] \"H\"   \"L\"  \n[3,] \"I\"   \"K\"  \n[4,] \"F\"   \"C\"  \n\n\n\n\n\n\n\nRandomised Complete Blocks Design (see Exercise 2.7)\n\n\n\n\n‘agricolae’",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The design of field experiments</span>"
+    ]
+  },
+  {
+    "objectID": "03-DescriptiveStats.html",
+    "href": "03-DescriptiveStats.html",
+    "title": "3  Describing the Observations",
+    "section": "",
+    "text": "3.1 Describing nominal data\nNominal data are produced by assigning the subjects to one of a set of categories, such as dead/alive, germinated/ungerminated, red/blue/green, and so on. For this data, especially when the number of categories is higher than two, the statistics described in book Chapter 3 cannot be used and different approaches need to be sought for their description.\nThe most widespread technique is to derive absolute frequencies, that are the counts of individuals in each category; by doing so, a distribution of frequencies is built.\nAs an example of nominal data we can take the ‘mtcars’ dataset, that was extracted from the 1974 Motor Trend US magazine and comprises 32 old automobiles. The dataset is available in R and we show part of it in table 3.2.\nPart of the dataset ‘mtcars’ in R, representing the characteristics of 32 old automobiles; ‘vs’ is the type of engine (0 for V-shaped and 1 for straight engine) and ‘gear’ is the number of forward gears. More detail is given in the text.\n\n\n\nvs\ngear\n\n\n\n\nMazda RX4\n0\n4\n\n\nMazda RX4 Wag\n0\n4\n\n\nDatsun 710\n1\n4\n\n\nHornet 4 Drive\n1\n3\n\n\nHornet Sportabout\n0\n3\n\n\nValiant\n1\n3\n\n\nDuster 360\n0\n3\n\n\nMerc 240D\n1\n4\n\n\nMerc 230\n1\n4\n\n\nMerc 280\n1\n4\n\n\nMerc 280C\n1\n4\n\n\nMerc 450SE\n0\n3\n\n\nMerc 450SL\n0\n3\n\n\nMerc 450SLC\n0\n3\n\n\nCadillac Fleetwood\n0\n3\n\n\nLincoln Continental\n0\n3\n\n\nChrysler Imperial\n0\n3\n\n\nFiat 128\n1\n4\n\n\nHonda Civic\n1\n4\n\n\nToyota Corolla\n1\n4\n\n\nToyota Corona\n1\n3\n\n\nDodge Challenger\n0\n3\n\n\nAMC Javelin\n0\n3\n\n\nCamaro Z28\n0\n3\n\n\nPontiac Firebird\n0\n3\n\n\nFiat X1-9\n1\n4\n\n\nPorsche 914-2\n0\n5\n\n\nLotus Europa\n1\n5\n\n\nFord Pantera L\n0\n5\n\n\nFerrari Dino\n0\n5\n\n\nMaserati Bora\n0\n5\n\n\nVolvo 142E\n1\n4\nThe variable ‘vs’ in ‘mtcars’ takes the values 0 for V-shaped engine and 1 for straight engine. Obviously, the two values 0 and 1 are just used to name the two categories and the resulting variable is purely nominal. The absolute frequencies of cars in the two categories are, respectively 18 and 14 and they are easily obtained by a counting process. In R, these absolute frequencies can be obtained by the table() function, as we show in the box below.\ndata(mtcars)\ntable(mtcars$vs)\n\n\n 0  1 \n18 14\nThe relative frequencies are obtained by dividing the absolute frequencies by the total number of observations. These frequencies are, respectively, 0.5625 and 0.4375 and, in R, they can be obtained by the joint usage of the table() and length() functions, where this latter returns the number of values in a vector.\ntable(mtcars$vs)/length(mtcars$vs)\n\n\n     0      1 \n0.5625 0.4375\nIf we consider a variable where the classes can be logically ordered, we can also calculate the cumulative frequencies, by summing up the frequency for one class with the frequencies for all previous classes. As an example we take the ‘gear’ variable in the ‘mtcars’ dataset, showing the number of forward gears for each car. We can easily see that 15 cars have 3 gears and 27 cars have 4 gears or less. In R, cumulative sums can be calculated by using the cumsum() function, as shown in the box below.\ncumsum(table(mtcars$gear))\n\n 3  4  5 \n15 27 32\nIn some circumstances, it may be convenient to ‘bin’ a continuous variable into a set of intervals. For example, if we have recorded the ages of a big group of people, we can divide the scale into intervals of five years (e.g., from 10 to 15, from 15 to 20 and so on) and, eventually, assign each individual to the appropriate age class. Such a technique is called binning or bucketing.\nAs an example, we can consider the ‘co2’ dataset, that is included in the base R installation. It contains 468 values of CO_2_ atmospheric concentrations, expressed in parts per million, as observed at monthly intervals in the US. With such a big dataset, the mean and standard deviation are not sufficient to get a good feel for the data and it would be important to have an idea of the shape of the dataset. Therefore we can split the continuous scale into a series of intervals, from 310 ppm to 370 ppm, with breaks every 10 ppm and count the observations in each interval. In the box below, the function cut() assigns each value to the corresponding interval (please note the ‘breaks’ argument, which sets the margins of each interval. Intervals are, by default, left open and right-closed), while the function table() calculates the frequencies.\ndata(co2)\nco2 &lt;- as.vector(co2)\nmean(co2)\n\n[1] 337.0535\n\nmin(co2)\n\n[1] 313.18\n\nmax(co2)\n\n[1] 366.84\n\n# binning\nclasses &lt;- cut(co2, breaks = c(310,320,330,340,350,360,370))\nfreq &lt;- table(classes)\nfreq\n\nclasses\n(310,320] (320,330] (330,340] (340,350] (350,360] (360,370] \n       70       117        86        76        86        33",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Describing the Observations</span>"
+    ]
+  },
+  {
+    "objectID": "03-DescriptiveStats.html#graphical-representations",
+    "href": "03-DescriptiveStats.html#graphical-representations",
+    "title": "3  Describing nominal data",
+    "section": "3.2 Graphical representations",
+    "text": "3.2 Graphical representations\nA distribution of frequency can be represented by using a ‘pie’ chart, which can be drawn with ggplot. The coding conist of producing a bar chart with stacked segments and rotating the coordinate system, as shown in the box below.\n\nlibrary(ggplot2)\ndfr &lt;- data.frame(\"Class\" = names(freq),\n                  \"Freq\" = as.numeric(freq))\nggplot(data = dfr) +\n  geom_bar(aes(x = NA, y = Freq, fill = Class),\n           stat=\"identity\", position = \"fill\") +\n  coord_polar(\"y\", start=0) +\n  theme_void() # remove background, grid, numeric labels",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Describing nominal data</span>"
+    ]
+  },
+  {
+    "objectID": "03-DescriptiveStats.html#contingency-tables",
+    "href": "03-DescriptiveStats.html#contingency-tables",
+    "title": "3  Describing nominal data",
+    "section": "3.3 Contingency tables",
+    "text": "3.3 Contingency tables\nWhen we have more than one cataegorical variable, we can summarise the distribution of frequency by using two-way tables, usually known as contingency tables or crosstabs. These tables can be created by providing two or more vectors as arguments to the table() function; it is important to keep in mind that, even if the resulting table may resamble a matrix or a data.frame, a contingency table represents a peculiar class in R, with several specific methods, that we will explore later. The box below shows a contingency table that shows the cross tabulation for ‘gear’ and ‘vs’ in ‘mtcars’.\n\ntable(mtcars$vs, mtcars$gear)\n\n   \n     3  4  5\n  0 12  2  4\n  1  3 10  1\n\n\nAnother interesting table is contained in the ‘datasets’ package and is named ‘HairEyeColor’. It shows the distribution of hair and eye color in 592 statistics students, depending on sex; both characters are expressed in four classes, i.e. black, brown, red and blond hair and brown, blue, hazel and green eyes. Considering females, the contingency table is reported in the following table and it is augmented with row and column sums (see later).\n\n\n\nDistribution of hair and eye color for 313 female statistics students, augmented with row and column sums. Dataset taken from R package ‘datasets’\n\n\n\nBrown eye\nBlue eye\nHazel eye\nGreen eye\nROW SUMS\n\n\n\n\nBlack hair\n36\n9\n5\n2\n52\n\n\nBrown hair\n66\n34\n29\n14\n143\n\n\nRed hair\n16\n7\n7\n7\n37\n\n\nBlond hair\n4\n64\n5\n8\n81\n\n\nCOLUMN SUMS\n122\n114\n46\n31\n313",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Describing nominal data</span>"
+    ]
+  },
+  {
+    "objectID": "03-DescriptiveStats.html#independence",
+    "href": "03-DescriptiveStats.html#independence",
+    "title": "3  Describing nominal data",
+    "section": "3.4 Independence",
+    "text": "3.4 Independence\nWith a contingency table, we may be interested in assessing whether the two variables show some sort of dependency relationship. In the previous example, is there any relationship between the color of the eyes and the color of the hair? If not, we say that the two variables are independent. Independency is assessed by using the \\(\\chi^2\\) statistic.\nAs the first step, we need to calculate the marginal frequencies, i.e. the sums of frequencies by row and by column (please note that the entries of a contingency table are called joint frequencies). These sums are reported in the Table above.\nLet’s consider black hair: in total there are 52 women with black air, that is \\(52/313 \\times 100 = 16.6\\)% of the total. If the two characters were independent, the above proportion should not change, depending on the color of eyes. For example, we have 122 women with brown eyes and 16.6% of those should be black haired, which makes up an expected value of 20.26837 black haired and brown eyed women (much lower than the observed 36). Another example: the expected value of blue eyed and black haired women is \\(114 \\times 0.166 = 18.9\\) (much higher than the observed). A third example may be useful: in total, there is \\(143/313 = 45.7\\)% of brown haired women and, in case of independence, we would expect \\(46 \\times 0.457 =  21.02\\) brown haired and hazel eyed woman. Keeping on with the calculations, we could derive a table of expected frequency, in the case of complete independence between the two characters. All the expected values in case of independency are reported in the Table below.\n\n\n\nExpected values of hair and eye color for 313 female statistics students, augmented with row and column sums. Expectations assume total lack of dependency between the two variables.\n\n\n\n\n\n\n\n\n\n\n\nBrown eye\nBlue eye\nHazel eye\nGreen eye\nROW SUMS\n\n\n\n\nBlack hair\n20.26837\n18.93930\n7.642173\n5.150160\n52\n\n\nBrown hair\n55.73802\n52.08307\n21.015974\n14.162939\n143\n\n\nRed hair\n14.42173\n13.47604\n5.437700\n3.664537\n37\n\n\nBlond hair\n31.57189\n29.50160\n11.904153\n8.022364\n81\n\n\nCOLUMN SUMS\n122.00000\n114.00000\n46.000000\n31.000000\n313\n\n\n\n\n\nThe observed and expected values are different, which might indicate a some sort of relationship between the two variables; for example, having red hair might imply that we are more likely to have eyes of a certain color. In order to quantify the discrepancy between the two tables, we calculate the \\(\\chi^2\\) stat, that is:\n\\[\\chi ^2  = \\sum \\left[ \\frac{\\left( {f_o  - f_e } \\right)^2 }{f_e } \\right]\\]\nwhere \\(f_o\\) are the observed frequencies and \\(f_e\\) are the expected frequencies. For example, for the first value we have:\n\\[\\chi^2_1  = \\left[ \\frac{\\left( {36  - 20.26837 } \\right)^2 }{20.26837 } \\right]\\]\nIn all, we should calculate 16 ratios and sum them to each other. The final \\(\\chi^2\\) value should be equal to 0 in case of independence and it should increase as the relationship between the two variables increases. With R, the chi square value is provided as an output of the summary() method, applied to the table object.\n\ndata(HairEyeColor)\ntab &lt;- HairEyeColor[,,2]\nsummary(tab)\n\nNumber of cases in table: 313 \nNumber of factors: 2 \nTest for independence of all factors:\n    Chisq = 106.66, df = 9, p-value = 7.014e-19\n    Chi-squared approximation may be incorrect\n\n\nThe resulting value is 106.66 and it suggests that the two variables are not independent. In order to get a better appriciation of the extend of dependency, we can compare the chi square value with its maximum allawable value, which is:\n\\[\\max \\left( \\chi ^2 \\right)  = n \\cdot \\min (r - 1,\\,c - 1)\\]\ni.e. the product between the number of subjects (\\(n\\)) and the minimum value between the number of rows minus one and the number of columns minus one (in our case, it is \\(313 \\times 3 = 939\\)).\nThe square root of the ratio between the observed chi square value and the maximum value is know as the Cramer’s V coefficient and it is more understandable than the chi square, as it is always included between 0 and 1.\n\nVcram &lt;- sqrt(summary(tab)$statistic/(sum(tab) * min(nrow(tab) - 1, ncol(tab) - 1)))\nVcram\n\n[1] 0.3370355",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Describing nominal data</span>"
+    ]
+  },
+  {
+    "objectID": "03-DescriptiveStats.html#questions-and-exercises",
+    "href": "03-DescriptiveStats.html#questions-and-exercises",
+    "title": "3  Describing nominal data",
+    "section": "3.5 Questions and exercises",
+    "text": "3.5 Questions and exercises\n\nList and discuss the main statistics for nominal and ordinal variables\nDescribe and discuss briefly the chi square coefficient\nA scientist ha compared the proportion of females in two random samples of insects treated with two different substances (A and B). With substance A, they found 275 males and 175 females, while, with substance B they found 326 males and 297 females. Considering these results, determine the degree of association between the two variables (sex and substance), in relation to the maximum and minimum allowable level for the selected statistic.\nLoad the csv file ‘students.csv’ from https://www.casaonofri.it/_datasets/students.csv. This dataset relates to a number of students, their votes in several undergraduate exams and information on high school. Determine: (i) the absolute and relative frequencies for the different subjects; (ii) the frequency distribution of votes in three classes (bins): &lt;24, 24-27, &gt;27; (iii) whether the votes depend on the exam subject and (iv) whether the votes depend on the high school type.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Describing nominal data</span>"
+    ]
+  },
+  {
+    "objectID": "03-DescriptiveStats.html#describing-nominal-data",
+    "href": "03-DescriptiveStats.html#describing-nominal-data",
+    "title": "3  Describing the Observations",
+    "section": "",
+    "text": "3.1.1 Descriptive stats for distributions of frequencies\nFor categorical data, we can retrieve the mode, which is the class with the highest frequency. For ordinal data, wherever distances between classes are meaningful, and for discrete data, we can also calculate the median and other percentiles, as well as the mean and other statistics of spread (e.g., variance, standard deviation). The mean is calculated as:\n\\[\\mu = \\frac{\\sum\\limits_{i = 1}^n f_i x_i}{\\sum\\limits_{i = 1}^n f_i}\\]\nwhere \\(x_i\\) is the value for the i-th class, and \\(f_i\\) is the frequency for the same class. Likewise, the deviance, is calculated as:\n\\[SS = \\sum\\limits_{i = 1}^n f_i (x_i - \\mu)^2\\]\nFor example, considering the ‘gear’ variable in Table 3.2, the average number of forward gears is:\n\\[\\frac{ 15 \\times 3 + 12 \\times 4 + 5 \\times 5}{15 + 12 + 5} = 3.6875\\]\nwhile the deviance is:\n\\[SS = 15 \\times (3 - 3.6875)^2 + 12 \\times (4 - 3.6875)^2 + 5 \\times (5 - 3.l875)^2 = 16.875\\]\nWith interval data (binned data), descriptive statistics should be calculated by using the raw data, if they are available. If they are not, we can use the frequency distribution obtained from binning, by assigning to each individual the central value of the interval class to which it belongs. As an example, we can consider the distribution of frequencies in Table 3.3, relating to the time (in minutes) taken to complete a statistic assignment for a group of students in biotechnology. We can see that the mean is equal to:\n\\[\\frac{7.5 \\times 1 + 12.5 \\times 4 + 17.5 \\times 3 + 22.5 \\times 2}{10} = 15.5\\]\n\n\n\nDistribution of frequency for the time (in minutes) taken to complete a statistic assignment for a group of students in biotechnology\n\n\nTime interval\nCentral value\nCount\n\n\n\n\n5 - 10\n7.5\n1\n\n\n10 - 15\n12.5\n4\n\n\n15 - 20\n17.5\n3\n\n\n20 - 25\n22.5\n2\n\n\n\n\n\nThe calculation of the deviance is left as an exercise.\n\n\n3.1.2 Graphical representations\nA distribution of frequency can be represented by using a ‘pie’ chart, which can be drawn with ggplot. The coding conist of producing a bar chart with stacked segments and rotating the coordinate system, as shown in the box below.\n\nlibrary(ggplot2)\ndfr &lt;- data.frame(\"Class\" = names(freq),\n                  \"Freq\" = as.numeric(freq))\nggplot(data = dfr) +\n  geom_bar(aes(x = NA, y = Freq, fill = Class),\n           stat=\"identity\", position = \"fill\") +\n  coord_polar(\"y\", start=0) +\n  theme_void() # remove background, grid, numeric labels\n\n\n\n\n\n\n\n\n\n\n3.1.3 Contingency tables\nWhen we have more than one cataegorical variable, we can summarise the distribution of frequency by using two-way tables, usually known as contingency tables or crosstabs. These tables can be created by providing two or more vectors as arguments to the table() function; it is important to keep in mind that, even if the resulting table may resamble a matrix or a data.frame, a contingency table represents a peculiar class in R, with several specific methods, that we will explore later. The box below shows a contingency table that shows the cross tabulation for ‘gear’ and ‘vs’ in ‘mtcars’.\n\ntable(mtcars$vs, mtcars$gear)\n\n   \n     3  4  5\n  0 12  2  4\n  1  3 10  1\n\n\nAnother interesting table is contained in the ‘datasets’ package and is named ‘HairEyeColor’. It shows the distribution of hair and eye color in 592 statistics students, depending on sex; both characters are expressed in four classes, i.e. black, brown, red and blond hair and brown, blue, hazel and green eyes. Considering females, the contingency table is reported in the following table and it is augmented with row and column sums (see later).\n\n\n\nDistribution of hair and eye color for 313 female statistics students, augmented with row and column sums. Dataset taken from R package ‘datasets’\n\n\n\nBrown eye\nBlue eye\nHazel eye\nGreen eye\nROW SUMS\n\n\n\n\nBlack hair\n36\n9\n5\n2\n52\n\n\nBrown hair\n66\n34\n29\n14\n143\n\n\nRed hair\n16\n7\n7\n7\n37\n\n\nBlond hair\n4\n64\n5\n8\n81\n\n\nCOLUMN SUMS\n122\n114\n46\n31\n313\n\n\n\n\n\n\n\n3.1.4 Independence\nWith a contingency table, we may be interested in assessing whether the two variables show some sort of dependency relationship. In the previous example, is there any relationship between the color of the eyes and the color of the hair? If not, we say that the two variables are independent. Independency is assessed by using the \\(\\chi^2\\) statistic.\nAs the first step, we need to calculate the marginal frequencies, i.e. the sums of frequencies by row and by column (please note that the entries of a contingency table are called joint frequencies). These sums are reported in the Table above.\nLet’s consider black hair: in total there are 52 women with black air, that is \\(52/313 \\times 100 = 16.6\\)% of the total. If the two characters were independent, the above proportion should not change, depending on the color of eyes. For example, we have 122 women with brown eyes and 16.6% of those should be black haired, which makes up an expected value of 20.26837 black haired and brown eyed women (much lower than the observed 36). Another example: the expected value of blue eyed and black haired women is \\(114 \\times 0.166 = 18.9\\) (much higher than the observed). A third example may be useful: in total, there is \\(143/313 = 45.7\\)% of brown haired women and, in case of independence, we would expect \\(46 \\times 0.457 =  21.02\\) brown haired and hazel eyed woman. Keeping on with the calculations, we could derive a table of expected frequency, in the case of complete independence between the two characters. All the expected values in case of independency are reported in the Table below.\n\n\n\nExpected values of hair and eye color for 313 female statistics students, augmented with row and column sums. Expectations assume total lack of dependency between the two variables.\n\n\n\n\n\n\n\n\n\n\n\nBrown eye\nBlue eye\nHazel eye\nGreen eye\nROW SUMS\n\n\n\n\nBlack hair\n20.26837\n18.93930\n7.642173\n5.150160\n52\n\n\nBrown hair\n55.73802\n52.08307\n21.015974\n14.162939\n143\n\n\nRed hair\n14.42173\n13.47604\n5.437700\n3.664537\n37\n\n\nBlond hair\n31.57189\n29.50160\n11.904153\n8.022364\n81\n\n\nCOLUMN SUMS\n122.00000\n114.00000\n46.000000\n31.000000\n313\n\n\n\n\n\nThe observed and expected values are different, which might indicate a some sort of relationship between the two variables; for example, having red hair might imply that we are more likely to have eyes of a certain color. In order to quantify the discrepancy between the two tables, we calculate the \\(\\chi^2\\) stat, that is:\n\\[\\chi ^2  = \\sum \\left[ \\frac{\\left( {f_o  - f_e } \\right)^2 }{f_e } \\right]\\]\nwhere \\(f_o\\) are the observed frequencies and \\(f_e\\) are the expected frequencies. For example, for the first value we have:\n\\[\\chi^2_1  = \\left[ \\frac{\\left( {36  - 20.26837 } \\right)^2 }{20.26837 } \\right]\\]\nIn all, we should calculate 16 ratios and sum them to each other. The final \\(\\chi^2\\) value should be equal to 0 in case of independence and it should increase as the relationship between the two variables increases. With R, the chi square value is provided as an output of the summary() method, applied to the table object.\n\ndata(HairEyeColor)\ntab &lt;- HairEyeColor[,,2]\nsummary(tab)\n\nNumber of cases in table: 313 \nNumber of factors: 2 \nTest for independence of all factors:\n    Chisq = 106.66, df = 9, p-value = 7.014e-19\n    Chi-squared approximation may be incorrect\n\n\nThe resulting value is 106.66 and it suggests that the two variables are not independent. In order to get a better appriciation of the extend of dependency, we can compare the chi square value with its maximum allawable value, which is:\n\\[\\max \\left( \\chi ^2 \\right)  = n \\cdot \\min (r - 1,\\,c - 1)\\]\ni.e. the product between the number of subjects (\\(n\\)) and the minimum value between the number of rows minus one and the number of columns minus one (in our case, it is \\(313 \\times 3 = 939\\)).\nThe square root of the ratio between the observed chi square value and the maximum value is know as the Cramer’s V coefficient and it is more understandable than the chi square, as it is always included between 0 and 1.\n\nVcram &lt;- sqrt(summary(tab)$statistic/(sum(tab) * min(nrow(tab) - 1, ncol(tab) - 1)))\nVcram\n\n[1] 0.3370355\n\n\n\n\n3.1.5 Questions and exercises\n\nList and discuss the main statistics for nominal and ordinal variables\nDescribe and discuss briefly the chi square coefficient\nA scientist ha compared the proportion of females in two random samples of insects treated with two different substances (A and B). With substance A, they found 275 males and 175 females, while, with substance B they found 326 males and 297 females. Considering these results, determine the degree of association between the two variables (sex and substance), in relation to the maximum and minimum allowable level for the selected statistic.\nLoad the csv file ‘students.csv’ from https://www.casaonofri.it/_datasets/students.csv. This dataset relates to a number of students, their votes in several undergraduate exams and information on high school. Determine: (i) the absolute and relative frequencies for the different subjects; (ii) the frequency distribution of votes in three classes (bins): &lt;24, 24-27, &gt;27; (iii) whether the votes depend on the exam subject and (iv) whether the votes depend on the high school type.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Describing the Observations</span>"
+    ]
+  },
+  {
+    "objectID": "04-CauseEffect.html",
+    "href": "04-CauseEffect.html",
+    "title": "4  Cause-effect Relationships",
+    "section": "",
+    "text": "Nothing to add, yet",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cause-effect Relationships</span>"
+    ]
+  },
+  {
+    "objectID": "06-Inference.html",
+    "href": "06-Inference.html",
+    "title": "6  Statistical Inference",
+    "section": "",
+    "text": "Nothing to add, yet",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Statistical Inference</span>"
+    ]
+  },
+  {
+    "objectID": "05-StochasticModels.html",
+    "href": "05-StochasticModels.html",
+    "title": "5  Stochastic models",
+    "section": "",
+    "text": "Nothing to add, yet",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Stochastic models</span>"
+    ]
+  },
+  {
+    "objectID": "07-TestIpotesi.html",
+    "href": "07-TestIpotesi.html",
+    "title": "7  Making Decisions under uncertainty",
+    "section": "",
+    "text": "Nothing to add, yet",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Making Decisions under uncertainty</span>"
+    ]
+  },
+  {
+    "objectID": "09-MCP.html",
+    "href": "09-MCP.html",
+    "title": "9  Linear/nonlinear combinations of model parameters",
+    "section": "",
+    "text": "9.1 Multiplicity corrections in ‘emmeans’\nIn the main book, at page 166 and earlier I have made the point that, with pairwise comparisons and, more generally, whenever simoultanous statistical tests are performed, it is necessary to provide P-values that account for the familywise error rate, i.e., the probability of committing at least one wrong rejection within the whole family of simuoltaneous tests (i.e., adjusted P-values).\nWith linear/nonlinear combinations of model parameters, a single test is usually based on the ratio between the combination (e.g., the difference between two means) and its standard error (t-test), which is supposed to follow a univariate t-distribution, when the null hypothesis is true. Consequently, when we have several simoultaneous t-tests, the vector of all the t-ratios can be supposed to follow a multivariate t-distribution, under the hypothesis that the null is true for all simoultaneous tests (Bretz et al., 2011). Therefore, adjusted P-values can be obtained by using the probability function of a multivariate t-distribution, although the calculations can be rather difficult.\nAs an example, let’s reconsider the ‘mixture’ data, which we have used in Chapter 9 of the main book: three herbicide mixtures and the untreated control were tested for their weed control ability against an important weed in tomato, i.e. Solanum nigrum. In the code below, we load the data, fit a one-way ANOVA model, using the weight of weed plants per pot as the response variable and the herbicide treatment as the explanatory factor. For the sake of simplicity, we omit the usual check for basic assumptions (see the main book); the ANOVA table shows that the treatment effect is significant and, thus, we proceed to comparing the means of treatments in a pairwise fashion. The P-values shown below do not account for the familiwise error rate, but only for the comparisonwise error rate; those P-values can be reproduced by using the probability function of a univariate Student’s t-distribution.\nlibrary(statforbiology)\n\nLoading required package: drc\n\n\nLoading required package: MASS\n\n\n\n'drc' has been loaded.\n\n\nPlease cite R and 'drc' if used for a publication,\n\n\nfor references type 'citation()' and 'citation('drc')'.\n\n\n\nAttaching package: 'drc'\n\n\nThe following objects are masked from 'package:stats':\n\n    gaussian, getInitial\n\nlibrary(emmeans)\n\nWelcome to emmeans.\nCaution: You lose important information if you filter this package's results.\nSee '? untidy'\n\nlibrary(multcomp)\n\nLoading required package: mvtnorm\n\n\nLoading required package: survival\n\n\nLoading required package: TH.data\n\n\n\nAttaching package: 'TH.data'\n\n\nThe following object is masked from 'package:MASS':\n\n    geyser\n\ndataset &lt;- getAgroData(\"mixture\")\ndataset$Treat &lt;- factor(dataset$Treat)\nmodel &lt;- lm(Weight ~ Treat, data = dataset)\nanova(model)\n\nAnalysis of Variance Table\n\nResponse: Weight\n          Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \nTreat      3 1089.53  363.18  23.663 2.509e-05 ***\nResiduals 12  184.18   15.35                      \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\ngroupMeans &lt;- emmeans(model, ~Treat)\ntab &lt;- contrast(groupMeans, method = \"pairwise\", adjust = \"none\")\ntab\n\n contrast                         estimate   SE df t.ratio p.value\n Metribuzin__348 - Mixture_378        4.05 2.77 12   1.461  0.1697\n Metribuzin__348 - Rimsulfuron_30    -7.68 2.77 12  -2.774  0.0168\n Metribuzin__348 - Unweeded         -17.60 2.77 12  -6.352 &lt;0.0001\n Mixture_378 - Rimsulfuron_30       -11.73 2.77 12  -4.235  0.0012\n Mixture_378 - Unweeded             -21.64 2.77 12  -7.813 &lt;0.0001\n Rimsulfuron_30 - Unweeded           -9.91 2.77 12  -3.578  0.0038\n\n# The P-value is obtained from the univariate t distribution (two-tails test)\nabst &lt;- abs(as.data.frame(tab)$t.ratio)\n2 * pt(abst, 12, lower.tail = FALSE)\n\n[1] 1.696785e-01 1.683167e-02 3.651239e-05 1.157189e-03 4.782986e-06\n[6] 3.794451e-03\nIn order to obtain familywise error rates, we should switch from the univariate to the multivariate t-distribution. For example, let’s consider the first t-ratio in the previous Code Box (t = 1.461); we should ask ourselves: “what is the probability of obtaining a t-ratio as extreme or more extreme than 1.461 from a multivariate t-distribution with 6 dimensions (i.e., the number of simoultaneous tests)?”. In this calculation we should also consider that the 6 tests are correlated, at least to some extent, due to fact the they, e.g., use the same error term at the denominator. In the simplest case (homoscedasticity and balanced data), the correlation is equal to 0.5 for all pairwise comparisons.\nIn formers time, when the computing power used to be limiting, calculating probabilities from the multivariate t-distribution was a daunting task. However, for some specific cases (e.g., linear models with homoscedastic and balanced data), adjusted P-values could be calculated by exploiting the distribution of the Studentised Range (so called ‘tukey’ method), which is the default method in the contrast() function of the emmeans package, as shown in the following Code box.\ntab &lt;- contrast(groupMeans, method = \"pairwise\")\n# tab &lt;- contrast(groupMeans, method = \"pairwise\", adjust = \"tukey\") # same as above\ntab\n\n contrast                         estimate   SE df t.ratio p.value\n Metribuzin__348 - Mixture_378        4.05 2.77 12   1.461  0.4885\n Metribuzin__348 - Rimsulfuron_30    -7.68 2.77 12  -2.774  0.0698\n Metribuzin__348 - Unweeded         -17.60 2.77 12  -6.352  0.0002\n Mixture_378 - Rimsulfuron_30       -11.73 2.77 12  -4.235  0.0055\n Mixture_378 - Unweeded             -21.64 2.77 12  -7.813 &lt;0.0001\n Rimsulfuron_30 - Unweeded           -9.91 2.77 12  -3.578  0.0173\n\nP value adjustment: tukey method for comparing a family of 4 estimates \n\n# The P-value is obtained from the Studentised Range Distribution (two-tails test)\nabst &lt;- abs(as.data.frame(tab)$t.ratio)\nptukey(sqrt(2) * abst, 4, 12, lower.tail = FALSE)\n\n[1] 4.884620e-01 6.981178e-02 1.853807e-04 5.501451e-03 2.473776e-05\n[6] 1.725725e-02\nThis simple method gives exact familywise error rates with balanced data (which is the vast majority in designed field experiments in agriculture) and works fairly well with some small degree of unbalance. Considering the traditional Multiple Comparison Testing procedures, the previous approach leads to the same results as the Tukey’s HSD (for balanced data) and to the Tukey-Kramer test (for unbalanced data).\nIn more recent times, it has become possible to directly calculate probabilities from the multivariate t-distribution, which is handy, as it provides a more general approach to obtaining familywise error rates. Such a distribution is available in the ‘mvtnorm’ package as the pmvt() function: we need to define, for each dimension, the interval for which we want to calculate the probability (in this case, for the first t-ratio such an interval is: \\(\\pm 1.461081\\)), the number of degrees of freedom (12) and the correlation matrix for the linear combinations, that can be directly retrieved from the ‘emmGrid’ object. The code below shows the calculations; the amount ‘plev’ represents the probability of sampling within the interval (none of the six nulls is wrongly rejected), while the familywise error rate corresponds to the probability of sampling outside the interval (at least one null is wrongly rejected), that is obtained by subtraction.\nlibrary(mvtnorm)\nt1 &lt;- abs(as.data.frame(tab)$t.ratio)[1]\nncontr &lt;- 6\ncorMat &lt;- cov2cor(vcov(tab))\nplev &lt;- pmvt(lower = rep(-t1, ncontr), upper=rep(t1, ncontr), df = 12,\n     corr = corMat)[1]\n1 - plev\n\n[1] 0.4883655\nThe above function emplyes numerical calculation methods and, thus, the results are not fully reproducible. However, it is easy to see that they are asymptotically equivalent to theose obtained with the ‘tukey’ adjustment method. In R, such an approach can be obtained by using the adjust = \"mvt\" argument.\ntab &lt;- contrast(groupMeans, method = \"pairwise\", adjust = \"mvt\")\ntab\n\n contrast                         estimate   SE df t.ratio p.value\n Metribuzin__348 - Mixture_378        4.05 2.77 12   1.461  0.4885\n Metribuzin__348 - Rimsulfuron_30    -7.68 2.77 12  -2.774  0.0698\n Metribuzin__348 - Unweeded         -17.60 2.77 12  -6.352  0.0001\n Mixture_378 - Rimsulfuron_30       -11.73 2.77 12  -4.235  0.0055\n Mixture_378 - Unweeded             -21.64 2.77 12  -7.813 &lt;0.0001\n Rimsulfuron_30 - Unweeded           -9.91 2.77 12  -3.578  0.0175\n\nP value adjustment: mvt method for 6 tests\nDue to its complexity, this method is not recommended for pairwise comparisons with balanced experiments, while it can turn out useful in other cases, for example with strongly unbalanced data.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Linear/nonlinear combinations of model parameters</span>"
+    ]
+  },
+  {
+    "objectID": "10-PuttingTogether.html",
+    "href": "10-PuttingTogether.html",
+    "title": "10  Putting everything together",
+    "section": "",
+    "text": "No other case-studies, yet",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Putting everything together</span>"
+    ]
+  },
+  {
+    "objectID": "11-ExtendingRegression.html",
+    "href": "11-ExtendingRegression.html",
+    "title": "11  Extending regression models",
+    "section": "",
+    "text": "No other case-studies, yet",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Extending regression models</span>"
+    ]
+  },
+  {
+    "objectID": "12-IntroMixed.html",
+    "href": "12-IntroMixed.html",
+    "title": "12  A brief intro to mixed models",
+    "section": "",
+    "text": "No additions, yet",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>A brief intro to mixed models</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html",
+    "href": "13-Appendices.html",
+    "title": "13  Updated list of datasets",
+    "section": "",
+    "text": "adjuvantsLS\nApart from those listed in the book, the package statforbiology contains many other dataset and the list is continuously updated. In this section you will find the full list of available datasets.\nAn experiment to compare three adjuvants (ammonium sulfate, mineral oil, non-ionic surfactant, and a control with no adjuvant) for rimsulfuron, which is a herbicide for weed control in maize. The experiment was designed as a Latin square with five replicates (Onofri, unpublished data), and the resulting dataset was slightly modified to make it more suitable for teaching purposes.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#adjuvantsls",
+    "href": "13-Appendices.html#adjuvantsls",
+    "title": "13  Updated list of datasets",
+    "section": "",
+    "text": "Herbicide (character): herbicide name\nAdjuvant (character): adjuvant name\nDose (character): dose of the herbicide + adjuvant\nCode (character): code for the adjuvants\nPlot (numerical coding): code for the plots\nColumn (numerical coding): code for the column in the Latin square grid\nRow (numerical coding): code for the row in the Latin square grid\nColumns 8 to 23 (character): each column is a weed (identified by the respective Bayer code), and the values represent the abundances (Braun-Blanquet codes)\nYield (numeric): crop yield (100 kg per hectare)\nHeight (numeric): crop height (cm)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#alfalfa3years",
+    "href": "13-Appendices.html#alfalfa3years",
+    "title": "13  Updated list of datasets",
+    "section": "alfalfa3years",
+    "text": "alfalfa3years\nA genotype experiment in alfalfa (Ligabue et al. 2009) to compare 20 genotypes in central Italy (medium Tiber Valley). The experiment was laid out as an RCBD with four replicates and the total yearly forage yield (sum of 3-4 cuts per year) was measured in each plot over 3 years (from 2006 to 2008).\n\nPlot (numeric): code for the plot\nBlock (numeric): code for the block\nGenotype (character): name of the genotype\nYear (numeric): year when yield was measured\nYield (numeric): total yearly forage yield (sum of 3-4 cuts per year; in tons per hectare of dry matter)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#ammi94",
+    "href": "13-Appendices.html#ammi94",
+    "title": "13  Updated list of datasets",
+    "section": "Ammi94",
+    "text": "Ammi94\nA field experiment to evaluate the effect of different densities of Ammi majus on the achene yield of sunflower was performed in 1984 and published by Onofri and Tei (1994a). The values represent the means of 4 replicates.\n\nDensity (numeric): number of weed plants per square meter\nYield (numeric): sunflower yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#ammi94_YL",
+    "href": "13-Appendices.html#ammi94_YL",
+    "title": "13  Updated list of datasets",
+    "section": "Ammi94_YL",
+    "text": "Ammi94_YL\nThis dataset provides the results of a field experiment to evaluate the effect of different densities of Ammi majus on the achene yield of sunflower. This experiment represents the repetition in time (2 years later) of the experiment reported in the dataset ‘Ammi94’ and contains the full dataset (with replicates). These results were also published in Onofri and Tei (1994a). The values represent the means of 4 replicates.\n\nDensity (numeric): number of weed plants per square meter\nBlock (numeric): code for the blocks\nYield (numeric): sunflower yield in tons per hectare\nYield (numeric): sunflower yield in percentage of the average yield with no weeds\nYield loss (numeric): Yield loss with respect to the control with no weeds",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#augmentedFactorial",
+    "href": "13-Appendices.html#augmentedFactorial",
+    "title": "13  Updated list of datasets",
+    "section": "augmentedFactorial",
+    "text": "augmentedFactorial\nAn experiment to compare two herbicides (rimsulfuron and dicamba) at two rates (HIGH and LOW) and with four adjuvant treatments (surfactant, frigate, mineral oil and no adjuvant). Aside this fully crossed structure, we introduced the untreated and hand-weeded controls. The design is in complete blocks and it is termed ‘augmented factorial’, because some extra treatment levels has been included beyond the crossed factorial structure.\n\nPlot (numerical coding): plot number\nHerbicide (character): name of herbicides or controls\nAdjuvant (character): adjuvant name\nDoseF (character): code for the herbicide dose\nBlock (numerical coding): code for the block\nYield (numeric): maize yield (tons per hectare)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#BBsurvey",
+    "href": "13-Appendices.html#BBsurvey",
+    "title": "13  Updated list of datasets",
+    "section": "BBsurvey",
+    "text": "BBsurvey\nA field experiment aiming to compare the weed control abilities of nine post-emergence herbicides against Sorghum halepense in maize. Three weeks after the treatment, the cover-abundance of S. halepense was visually recorded in six classes, using the Braun-Blanquet method (BranBlanquet_1964?).\n\nPlot (numeric): code for the plot\nHerbicide (character): code for the herbicide\nBBscore (character): Braun-Blanquet score (0, +, 1, 2, 3, 4, 5)\nL (numeric): lower limit of the ground covering class (%)\nU (numeric): upper limit of the ground covering class (%)\nmidPoint (numeric): centre of each ground covering class (%)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#beet",
+    "href": "13-Appendices.html#beet",
+    "title": "13  Updated list of datasets",
+    "section": "beet",
+    "text": "beet\nA split-plot tillage experiment in sugarbeet, where three types of tillage (minimum tillage = MIN; shallow plowing = SP; deep plowing = DP) and two types of chemical weed control methods (broadcast = TOT; in-furrow = PART) were compared in four complete blocks with three main-plots per block, split into two sub-plots per main-plot; the three types of tillage were randomly allocated to the main-plots in each block, while the two weed control treatments were randomly allocated to the sub-plots within each main-plot (Bianchi, 1992; unpublished data).\n\nTillage (character): tillage method\nWeedControl (character): weed control method\nBlock (numeric): code for the block\nYield (numeric): sugarbeet root yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#beetgrowth",
+    "href": "13-Appendices.html#beetgrowth",
+    "title": "13  Updated list of datasets",
+    "section": "beetGrowth",
+    "text": "beetGrowth\nAn experiment in which sugarbeet was grown either weed-free, or weed-infested (Covarelli and Onofri 1998). Crop weight per unit area (in kg/ha) was measured at six different timings (in Days After Emergence; DAE), using destructive methods from independent plots. The experiment was conducted using a completely randomized design with three replicates.\n\nDAE (numeric): Day After Emergence\nInfested (numeric): Crop Dry Weight in weed-infested plots (kg/ha)\nWeedFree (numeric): Crop Dry Weight in weed-free plots (kg/ha)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#brassica",
+    "href": "13-Appendices.html#brassica",
+    "title": "13  Updated list of datasets",
+    "section": "brassica",
+    "text": "brassica\nA short-term pot-bioassay to determine the phytotoxicity of imazethapyr was performed in hydroponic solution, using quartz-sand as a non sorptive media. The assay was performed at the ‘Institut für Unkrautforschung der Biologischen Bundesanstalt’ (Braunschweig, Germany) and the methods are described in Stalder and Pestemer (1980)(full citation: Stalder L. e Pestemer W., 1980. Availability to plants of herbicide residues in soil. Part I: A rapid method for estiming potentially available residues of herbicides. Weed Research, 20, 341-347). The test plant was Brassica rapa and the results were published by Onofri (1994)(full citation: Onofri, A., 1994. Applicazione di modelli empirici di regressione non-lineare in ricerche di lotta alle malerbe. Tesi di dottorato di ricerca in “Produttività delle piante coltivate”, VI ciclo, Università degli Studi di Perugia, Istituto di Agronomia generale e Coltivazioni erbacee, 138pp., Perugia).\n\nDose (numeric): Herbicide concentration in soil solution (as mg/L)\nFW (numeric): Fresh weight of the test plant as grams per pot.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#citrusgrove-or-speciesarea",
+    "href": "13-Appendices.html#citrusgrove-or-speciesarea",
+    "title": "13  Updated list of datasets",
+    "section": "citrusGrove or speciesArea",
+    "text": "citrusGrove or speciesArea\nAn experiment was conducted in a citrus grove in Sicily (Southern Italy) to determine the species-area relationship for the local weed community. In this study, a nested-plot survey was employed (Muller-Dumbois and Ellenberg 1974) where the number of weed species was counted in a plot of 1 m2 surface and the sampling area was progressively doubled in size. At each step, the number of new weed species was counted. The dataset is taken from Cristaudo et al. (2015).\n\nArea (numeric): sampled area (in square meters)\nnumSpecies (numeric): count of the number of species",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#crosses",
+    "href": "13-Appendices.html#crosses",
+    "title": "13  Updated list of datasets",
+    "section": "crosses",
+    "text": "crosses\nAn experiment to compare nine maize hybrids, obtained from three pollinating inbred lines (A1, A2, and A3), each one crossed with three different female inbred lines (A1 was crossed with B1, B2, and B3, A2 was crossed with B4, B5, and B6, while A3 was crossed B7, B8, and B9). The experiment was laid out as complete blocks with four replicates (36 subjects in total). The dataset was generated through Monte Carlo simulation.\n\nMale (character): pollinating line\nFemale (character): female line\nBlock (numeric): code for the blocks\nYield (numeric): maize yield (in tons per hectare)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#fabaBeanSplitMet",
+    "href": "13-Appendices.html#fabaBeanSplitMet",
+    "title": "13  Updated list of datasets",
+    "section": "fabaBeanSplitMet",
+    "text": "fabaBeanSplitMet\nSix faba bean genotypes were tested at two sowing times using a split-plot design in four complete blocks. Sowing times were randomized to main-plots within blocks, and genotypes were randomized to sub-plots within main-plots and blocks. The experiment was repeated in three years and two locations of Central Italy. The dataset was taken from Stagnari et al. (2007).\n\nLocation (character): name of the location\nSeason (numeric): year of harvest\nSowing (character): sowing time\nGenotype (character): name of the genotype\nBlock (numeric): code for the block in each experiment\nYield (numeric): crop grain yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#failuretimes",
+    "href": "13-Appendices.html#failuretimes",
+    "title": "13  Updated list of datasets",
+    "section": "failureTimes",
+    "text": "failureTimes\nAn experiment to record the failure time of heating systems as affected by four different operating temperatures. The design was completely randomized with six replicates, and the number of hours before failure was measured. The dataset is taken from W. (1972).\n\nTemp (numeric): testing temperature (in \\(^{\\circ}\\)F)\nHours_to_failure (numeric): number of hours before failure",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#fertilizationtiming",
+    "href": "13-Appendices.html#fertilizationtiming",
+    "title": "13  Updated list of datasets",
+    "section": "FertilizationTiming",
+    "text": "FertilizationTiming\nA field experiment to evaluate the effect of fertilization timing (early, optimal, late) on two genotypes (A and B). The experiment was laid out as an RCBD, and the response represents the amount of absorbed nitrogen by the plant (simulated data).\n\nTiming (character): timing of fertilization (early, optimal, late)\nGenotype (character): genotype\nBlock (numeric): code for the block\nNabs (numeric): amount of absorbed nitrogen",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#fgp_rape",
+    "href": "13-Appendices.html#fgp_rape",
+    "title": "13  Updated list of datasets",
+    "section": "FGP_rape",
+    "text": "FGP_rape\nAn experiment where the germination of three genotypes of oilseed rape was assessed in controlled conditions, at 20 \\(^{\\circ}\\)C, according to an RCBD with six replicates. One replicate per genotype, consisting of a Petri dish with 50 seeds, was put in each of six shelves inside the oven. The number of germinated seeds was counted 15 days after the start of the assay and expressed as the Final Proportion of Germinated seeds (FGP). The assay was repeated twice in different and independent ovens with the same experimental design. The dataset is taken from Pace et al. (2012).\n\nDish (numeric): code for the Petri dish\nRun (numeric coding): code for the run\nShelf (numeric): code for the shelf\nSpecies (character): plant species\nGenotype (character): genotype\nFGP (numeric): Final Germinated Proportion in each dish",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#floristicData1",
+    "href": "13-Appendices.html#floristicData1",
+    "title": "13  Updated list of datasets",
+    "section": "floristicData1",
+    "text": "floristicData1\nAn experiment where the weed flora composed by 8 weed species was recorded in 120 plots, included in a three-factor factorial experiment in a randomised blocks design. The counts of weeds are reported and the dataset was modified from Scavo et al (2020).\n\nF1 to F3 (character): the three experimental factors, respectively with 5, 2 and 3 levels\nRep (character): the blocks\nSP1 to SP8 (numeric): the counts for the eight weed species",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#heights",
+    "href": "13-Appendices.html#heights",
+    "title": "13  Updated list of datasets",
+    "section": "heights",
+    "text": "heights\nHighly unbalanced dataset, containing the height (cm) and yield (t/ha) of 20 maize plants belonging to 4 different genotypes. The dataset was generated through Monte Carlo simulation.\n\nId (numeric): code for the plot\nvar (character): code for the genotype\nheight (numeric): crop height (cm)\nyield (numeric): crop yield (t/ha)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#Hordeum_GR",
+    "href": "13-Appendices.html#Hordeum_GR",
+    "title": "13  Updated list of datasets",
+    "section": "Hordeum_GR",
+    "text": "Hordeum_GR\nThe germination rates of Hordeum spontaneum were studied, as affected by the environmental temperatures. This data was derived by germination assays at different temperatures, by using the dataset in Mesgaran et al (2017), with some slight modifications of the technique described in that manuscript.\n\nTemp (numeric): Environmental temperature (in °C)\nT50 (numeric): Median time to germination for the seed lot under study (in hours)\nGR50 (numeric): Median germination rate (as hours-1)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#insects",
+    "href": "13-Appendices.html#insects",
+    "title": "13  Updated list of datasets",
+    "section": "insects",
+    "text": "insects\nAn experiment in which tobacco plants were treated with three different insecticides was conducted using a completely randomized design with five replicates (resulting in a total of fifteen plants). The number of insects over the surface of leaves in each plant was counted three weeks after the treatments.\n\nInsecticide (character): code for the insecticide\nRep (numeric): code for the replicate (not blocks)\nCount (numeric). count of insects",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#johnsongrass",
+    "href": "13-Appendices.html#johnsongrass",
+    "title": "13  Updated list of datasets",
+    "section": "johnsongrass",
+    "text": "johnsongrass\nA pot experiment to evaluate the best timing for herbicide application against Sorghum halepense originated by rhizomes. Five timings were compared including a split treatment (2-3, 4-5, 6-7, 8-9, and 3-4/8-9 leaves), and an untreated check was added for comparison. Treatments were repeated on plants originating from rhizomes of different lengths (2, 4, and 6 nodes). The design was a fully crossed two-way factorial, laid out as completely randomized with four replicates. The dataset is taken from Onofri and Tei (1994b).\n\nLength (character): length of rhizomes at the beginning of the experiment\nTiming (character): crop stage at spraying\nRizomeWeight (numeric): weight of rhizomes four weeks after spraying (in grams per pot)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#leclerg",
+    "href": "13-Appendices.html#leclerg",
+    "title": "13  Updated list of datasets",
+    "section": "LeClerg",
+    "text": "LeClerg\nA genotype experiment in a completely randomized design, with five genotypes and four replicates. The dataset is modified from (Le Clerg et al. 1962).\n\nVariety (character): code for the genotype\nYield (numeric): crop yield in bushels per acre",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#lepidopteraeggs",
+    "href": "13-Appendices.html#lepidopteraeggs",
+    "title": "13  Updated list of datasets",
+    "section": "LepidopteraEggs",
+    "text": "LepidopteraEggs\nAn entomologist counted the number of eggs laid by a species of moth, on three different substrates using a completely randomized design with 15 replicates. This dataset was modified from Kuehl (2000).\n\nSubstrate (character): code for the substrate\nNo_of_eggs (numeric): count of the number of eggs",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#lettucels",
+    "href": "13-Appendices.html#lettucels",
+    "title": "13  Updated list of datasets",
+    "section": "lettuceLS",
+    "text": "lettuceLS\nAn experiment to assess the effect of four different fertilizers on lettuce yield. The experiment was laid out as a Latin square with four replicates. The dataset was generated through Monte Carlo simulation.\n\nFertilizer (character): code for the fertilizer\nRow (numeric): code for the row in the Latin square grid\nColumn (numeric): code for the column in the Latin square grid\nYield (numeric): lettuce yield (in kg per hectare \\(\\times\\) 100)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#maizeMET",
+    "href": "13-Appendices.html#maizeMET",
+    "title": "13  Updated list of datasets",
+    "section": "maizeMET",
+    "text": "maizeMET\nA multi-environment experiment in mazie, with four genotypes and 14 environments. The data represent the average yields for each genotype in each environment. This dataset is presented in Piepho (1998) and it can be used to reproduce the analyses presented there.\n\nEnv (numeric coding): code for the environment\nGen (character): code for the genotype\nYield (numeric): maize yield in tons per hectar",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#metamitron",
+    "href": "13-Appendices.html#metamitron",
+    "title": "13  Updated list of datasets",
+    "section": "metamitron",
+    "text": "metamitron\nAn experiment to study the degradation of the herbicide metamitron (M) in soil, either alone or in the presence of two co-applied herbicides, i.e. phenmedipham (P) and chloridazon (C). Ninety-six independent soil samples were treated with four herbicide combinations (i.e., M, M+P, M+C, and M+P+C, 32 samples per combination) and stored in a climatic chamber at 20\\(^{\\circ}\\)C. Three random soil samples were collected for each herbicide combination at eight different time points (0, 7, 14, 21, 32, 42, 55 and 67 days after treatment). Theu were stored in a refrigerator until chemical analyses. At the end of the experiment, all soil samples were analyzed to determine the residual concentration of metamitron. This dataset is taken from Vischetti et al. (1996), and it has been modified through Monte Carlo simulation, to make it more suitable for teaching purposes.\n\nTime (numeric): the time at sampling (in Days after the treatment)\nHerbicide (character): code for the herbicide combination\nRep (numeric): code for the replicate (not blocks; the experiment was fully randomized)\nConc (numeric): the concentration of metamitron in % of the initial value",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#missingval",
+    "href": "13-Appendices.html#missingval",
+    "title": "13  Updated list of datasets",
+    "section": "missingVal",
+    "text": "missingVal\nA fertilization trial was conducted according to a randomized complete block design with five replicates; however, due to unforeseen circumstances, one value is missing for the ‘50N’ treatment in the second block.\n\nFert (character): fertilization treatment\nBlock (numeric): code for the block\nP2O5 (numeric): content of P2O5 in leaves (%)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#mixture",
+    "href": "13-Appendices.html#mixture",
+    "title": "13  Updated list of datasets",
+    "section": "mixture",
+    "text": "mixture\nA pot experiment to compare weed control efficacy of two herbicides used alone and in a mixture. A control was also added as a reference, and thus, the four treatments were (i) Metribuzin, (ii) Rimsulfuron, (iii) Metribuzin + rimsulfuron, and (iv) the untreated control. Sixteen uniform pots were prepared and sown with Solanum nigrum. When the plants reached the 4-true-leaf stage, the pots were sprayed with the above herbicide solution following a completely randomized design with four replicates. Three weeks after the treatment, the plants in each pot were harvested and weighed: the lower the weight, the higher the efficacy of herbicides. The dataset is taken from (Onofri et al. 1995).\n\nTreat (character): herbicide treatment\nWeight (numeric): dry weight of weed plants (grams per pot)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#ngenotype-and-ngenotypefull",
+    "href": "13-Appendices.html#ngenotype-and-ngenotypefull",
+    "title": "13  Updated list of datasets",
+    "section": "NGenotype and NGenotypeFull",
+    "text": "NGenotype and NGenotypeFull\nFifteen genotypes of durum wheat were compared under two different N fertilization strategies (in the dataset ‘NGenotype’ the number of genotypes has been reduced to 5). The dataset was generated through Monte Carlo simulation that started from the original data in Stagnari et al. (2013).\n\nBlock (numeric): code for the block\nGenotype (character): code for the genotype\nNitrogen (numeric): code for the fertilization strategy\nYield (numeric): wheat yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#nwheat",
+    "href": "13-Appendices.html#nwheat",
+    "title": "13  Updated list of datasets",
+    "section": "NWheat",
+    "text": "NWheat\nA N fertilization experiment was conducted in wheat using a randomized complete block design, with four N doses and four replicates. The dataset was generated through Monte Carlo simulation.\n\nDose (numeric): N fertilization rate (Kg/ha)\nBlock (numeric): code for the block\nYield (numeric): crop yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#oat1l",
+    "href": "13-Appendices.html#oat1l",
+    "title": "13  Updated list of datasets",
+    "section": "Oat1L",
+    "text": "Oat1L\nA field experiment was laid out as a CRD with three replicates to compare five genotypes of oat in one location. The data was generated through Monte Carlo simulation.\n\nGenotype (character): code for the genotype\nYield (numeric): oat yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#oat2l",
+    "href": "13-Appendices.html#oat2l",
+    "title": "13  Updated list of datasets",
+    "section": "Oat2L",
+    "text": "Oat2L\nThe same experiment as for ‘Oat1L’ was repeated in a second location, also with a completely randomized layout. Also the data for the second location were generated through Monte Carlo simulation.\n\nLocation (character): code for the location\nGenotype (character): code for the genotype\nYield (numeric): oat yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#orangeirrigation",
+    "href": "13-Appendices.html#orangeirrigation",
+    "title": "13  Updated list of datasets",
+    "section": "orangeIrrigation",
+    "text": "orangeIrrigation\nAn irrigation experiment was conducted in an orange grove in Southern Italy, comprising five irrigation systems in five complete blocks. The dataset was simulated by Monte Carlo methods.\n\nMethod (character): irrigation systems\nBlock (numeric): code for the block\nYield (numeric): orange yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#pea_multiloc",
+    "href": "13-Appendices.html#pea_multiloc",
+    "title": "13  Updated list of datasets",
+    "section": "pea_MultiLoc",
+    "text": "pea_MultiLoc\nA multi-location genotype experiment in field pea, to compare 17 genotypes in 12 locations. In each location, the experiment was laid out as an RCBD, with four blocks. The dataset was generated through Monte Carlo simulation, starting from the data in Monotti et al. (2009).\n\nId (numeric): code for the plot\nLoc (character): code for the location\nVar (character): code for the genotype\nBlock (character): code for the block\nYield (numeric): pea yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#rainfall2022",
+    "href": "13-Appendices.html#rainfall2022",
+    "title": "13  Updated list of datasets",
+    "section": "Rainfall2022",
+    "text": "Rainfall2022\nDaily rainfall amounts (mm) in central Italy in 2022 from a local meteorological station.\n\nDOY (numeric): Day Of the Year\nPRP (numeric): amount of daily rainfall (mm per day)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#recrops",
+    "href": "13-Appendices.html#recrops",
+    "title": "13  Updated list of datasets",
+    "section": "recropS",
+    "text": "recropS\nRimsulfuron was applied at the recommended rate on bare soil, and untreated plots were included for comparison. Forty days after the treatment, sugarbeet, rape and soybean were sown on treated and untreated plots, and the weight of the plants was determined four weeks after sowing. The experiment was laid down as a strip-plot in complete blocks: in each block, the herbicide treatments (rimsulfuron and the untreated control) were randomly allocated to each of two columns, while the three crops were randomly allocated to each of three rows (Onofri, unpublished data).\n\nHerbicide (Character): name of the herbicide treatment\nCrop (character): name of the crop\nBlock (numeric): code for the block\nCropBiomass (numeric): weight of crop biomass four weeks after sowing",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#rimsulfuron",
+    "href": "13-Appendices.html#rimsulfuron",
+    "title": "13  Updated list of datasets",
+    "section": "rimsulfuron",
+    "text": "rimsulfuron\nA herbicide experiment where rimsulfuron was used with different timings and in different mixtures and compared to several other herbicide solutions for weed control in maize. At the end of the crop cycle, herbicide efficacy was assessed by measuring the coverage of weeds (%) and the yield of maize (in 100 kg per hectare).\n\nHerbicide (character): name of the herbicide treatment\nPlot (numeric): code for the plot\nCode (numeric): code for the herbicide\nBlock (numeric): code for the block\nColumn (numeric): code for the column within each block\nWeedCover (numeric): coverage of weeds (in %)\nYield (numeric): maize yield (in 100 kg per hectare)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#sadocchi_man",
+    "href": "13-Appendices.html#sadocchi_man",
+    "title": "13  Updated list of datasets",
+    "section": "sadocchi_man",
+    "text": "sadocchi_man\nExemplary and simple dataset for multivariate analyses, such as MANOVA. It refers to a completely randomised, two-factor factorial experiment, with two numeric responses. The dataset was taken from Sadocchi (1987).\n\na (numerical coding): levels for the experimental factor ‘a’\nb (numerical coding): levels for the experimental factor ‘b’\ny1 (numeric): 1st quantitative response variable\ny2 (numeric): 2nd quantitative response variable",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#seedBank",
+    "href": "13-Appendices.html#seedBank",
+    "title": "13  Updated list of datasets",
+    "section": "seedBank",
+    "text": "seedBank\nSix rotations were compared in two agricultural systems (BIO and LOW) on a complete block design with three replicates. After six years, 10 soil cores were taken from each sub-plot and soil seed bank was counted. Dataset was taken from Graziani et al., 2007 and it was modified to meet teaching purposes.\n\nSample (numeric): cod for each soil core\nBlock (numerical coding): code for the block\nPlot (numerical coding): code for plots\nTreatment (numerical coding): code for treatment levels (12 combinations)\nSystem (character): the systems under comparison\nRotation (character): the rotations under comparison\nnoSeeds (numeric): counts of weed seed in each soil core",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#sinapis",
+    "href": "13-Appendices.html#sinapis",
+    "title": "13  Updated list of datasets",
+    "section": "Sinapis",
+    "text": "Sinapis\nA study was conducted to evaluate the effect of increasing densities of a weed (Sinapis arvensis) on sunflower yield (tons per hectare). The dataset was taken from Onofri and Tei (1994a).\n\ndensity (numeric): weed density in plants per square meter\nblock (numeric): code for the block\nyield (numeric): sunflower grain yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#SOLNI_hormesis",
+    "href": "13-Appendices.html#SOLNI_hormesis",
+    "title": "13  Updated list of datasets",
+    "section": "SOLNI_hormesis",
+    "text": "SOLNI_hormesis\nA pot-bioassay study was conducted to evaluate the efficacy of rimsulfuron against Solanum nigrum at the 4-leaf stage. The effect was assessed by weighing the plants in each pot 21 days after the treatment; the response curve shows clear signs of stimulation at low herbicide doses (hormesis). The dataset was taken from Onofri et al. (1995).\n\nDose (numeric): rimsulfuron dose (g/ha)\nblock (numeric): weight of treated plants (grams per pot)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#sowingtime",
+    "href": "13-Appendices.html#sowingtime",
+    "title": "13  Updated list of datasets",
+    "section": "SowingTime",
+    "text": "SowingTime\nSix faba bean genotypes were tested at two sowing times using a split-plot design in four complete blocks. Sowing times were randomized to main-plots within blocks, and genotypes were randomized to sub-plots within main-plots and blocks. The dataset was taken from Stagnari et al. (2007).\n\nPlot (numeric): code for the plot\nSowingTime (character): sowing season\nGenotype (character): name of the genotype\nBlock (numeric): code for the block\nYield (numeric): crop grain yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#StarchGrain_g",
+    "href": "13-Appendices.html#StarchGrain_g",
+    "title": "13  Updated list of datasets",
+    "section": "starchGrain_g",
+    "text": "starchGrain_g\nThis dataset refers to an experiment which aimed to compare the diameters of starch grains from tubers of two potato producers. Starch grains were sampled from tubers collected from the production fields of the producers. The dataset shows the counts of starch grains assigned to one of five diameter classes (&lt;4, [4−8[, [8−12[, [12−16[,≥16 \\(\\mu m\\)). For each producer, the diameters were measured from twelve photos taken with a microscope. The original dataset is in a grouped form and one record represents a photo (12 photos per each producer). The dataset was taken from Onofri et al. (2019)\n\nGroup (character): the producer\nPhoto (numeric): code for each photo\nc1-c5 (numeric): the counts of individual in each class",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#StarchGrain_u",
+    "href": "13-Appendices.html#StarchGrain_u",
+    "title": "13  Updated list of datasets",
+    "section": "starchGrain_u",
+    "text": "starchGrain_u\nSame dataset as ‘StarchGrain_g’, but in ungrouped form (one row for each starch grain).\n\nPhoto (numeric): code for each photo\nGroup (character): the producer\nClass (character): the diameter class to which each grain belongs (c1 to c5)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#StarchGrain_s",
+    "href": "13-Appendices.html#StarchGrain_s",
+    "title": "13  Updated list of datasets",
+    "section": "starchGrain_s",
+    "text": "starchGrain_s\nSame dataset as ‘StarchGrain_g’, but in censored ‘long’ form (one row for each starch grain), where the class is represented by using the lower and upper diameter values whithin which the real diameter value is comprised.\n\nPhoto (numeric): code for each photo\nGroup (character): the producer\nsizeLow (numeric): the lower limit for the diameter class\nsizeUp (numeric): the upper limit for the diameter class\nClass (character): the diameter class to which each grain belongs (c1 to c5)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#sugarsmedia",
+    "href": "13-Appendices.html#sugarsmedia",
+    "title": "13  Updated list of datasets",
+    "section": "sugarsMedia",
+    "text": "sugarsMedia\nPlant tissues of tomato were grown in tissue cultures using three types of media, each based on the addition of a specific amount of either glucose, fructose, or sucrose to the control. The experiment was conducted using a completely randomized design with five replicates, and the growth of cells was recorded for each subject. The dataset was generated through Monte Carlo simulation, starting from the original data in Kuehl (2000).\n\nSugar (character): type of substrate\nGrowth (numeric): tissue growth in mm",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#Sunflower",
+    "href": "13-Appendices.html#Sunflower",
+    "title": "13  Updated list of datasets",
+    "section": "Sunflower",
+    "text": "Sunflower\nWater extracts of two sunflower varieties were compared in terms of phytotoxicity to the same test-plant (Sinapis alba). Several lots of 50 seeds of S. alba were put in Petri dishes and moistened with water extracts at increasing concentrations (three replicated Petri dishes for each of four concentration levels, including the untreated control). Radicle lengths were determined seven days after the treatment. The experiment was planned with a CRD. Data are taken from Pannacci et al (2010)\n\nDose (numeric): concentration of extracts (g d.m. in 100 mL of water)\nRep (numeric): code for the replicate\nVar (character): name of sunflower varieties\nLength (numeric): root lengths in mm",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#timings_77490",
+    "href": "13-Appendices.html#timings_77490",
+    "title": "13  Updated list of datasets",
+    "section": "Timings_77490",
+    "text": "Timings_77490\nA field experiment with maize in which rimsulfuron was used post-emergence in maize at 4 different timings and compared to the untreated unweeded control. The aim was to assess the selectivity of the herbicide for the crop, depending on the moment of intervention. One value is missing due to an unforeseen event. The dataset is taken from Onofri (unpublished data).\n\nPlot (numeric): code for the plot\nTiming (character): timing of weed control as the number of maize leaves\nBlock (numeric): code for the the block\nHeight_30 (numeric): height of maize (cm) on 30 June (cm)\nWeight_30 (numeric): average weight of maize plants (g per plant) on 30 June\nFinalYield (numeric): grain yield of maize in kg/ha \\(\\times\\) 100",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#tkw",
+    "href": "13-Appendices.html#tkw",
+    "title": "13  Updated list of datasets",
+    "section": "TKW",
+    "text": "TKW\nAn experiment with 30 genotypes in three blocks, where the Weight of Thousand Kernels (TKW) was recorded in three sub-samples per plot (Ciriciofolo, unpublished data)\n\nPlot (numeric): code for the plot\nBlock (numeric): code for the block\nGenotype (character): name of the genotype\nSample (numeric): code for the subsample in each plot\nTKW (numeric): weight of 1000 wheat kernels (g)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#tripleuspermum",
+    "href": "13-Appendices.html#tripleuspermum",
+    "title": "13  Updated list of datasets",
+    "section": "Tripleuspermum",
+    "text": "Tripleuspermum\nPlants of Tripleuspermum inodorum were treated with a sulphonylurea herbicide (tribenuron-methyl) at increasing doses, and the fresh weight of the treated plants per pot was recorded 3 weeks after treatment. The experiment was completely randomized with three replicates and conducted at the Department of Integrated Pest Management, University of Aarhus, Denmark (Pannacci et al. 2013).\n\nDose (numeric): Dose of tribenuron-methyl (in g/ha)\nFreshWeight (numeric): weight of plants 3 weeks after the treatment (in grams per pot)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#waterProductivity",
+    "href": "13-Appendices.html#waterProductivity",
+    "title": "13  Updated list of datasets",
+    "section": "waterProductivity",
+    "text": "waterProductivity\nWater productivity was studied by Toscano et al. (2026) in lattuce, as affected by deficit irrigation. A pot experiment was performed in Sicily (Messina, Southern Italy), considering four irrigation volumes (100%, 75%, 50% and 25% of contained water capacity) on an experiment with four replicates. Water productivity was calculated for each plot as the ratio between above ground fresh biomass (g plant-1) and the cumulative net water input (L plant-1). The dataset was generated through Monte Carlo simulation, that started from the original data in Toscano et al (2026) and considered a completely randomised design, for the sake of simplicity.\n\nRegime (numeric): irrigation volume (in % of contained water capacity)\nWP (numeric): water productivity as the ratio between above ground fresh biomass (g plant-1) and the cumulative net water input (L plant-1)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#weedcounts",
+    "href": "13-Appendices.html#weedcounts",
+    "title": "13  Updated list of datasets",
+    "section": "WeedCounts",
+    "text": "WeedCounts\nCounts of three weed species (CHEAL: Chenopodium album, CHEHY: C. hybridum, and CHEPO: C. polyspermum) in twenty random quadrats in a field of central Italy (Onofri, unpublished data).\n\nSpecies (character): the weed species, identified by its Bayer code\nRep (numeric): code for the quadrat\nCount (numeric): count of the number of plants per quadrat",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#weedcountstrial",
+    "href": "13-Appendices.html#weedcountstrial",
+    "title": "13  Updated list of datasets",
+    "section": "WeedCountTrial",
+    "text": "WeedCountTrial\nCounts of weeds (ECHCG: Echinochloa crus-galli, AMARE: Amaranthus retroflexus, CHEAL: Chenopodium album, OTHER: other weed species) in an herbicide trial performed in central Italy, to compare 13 herbicides for weed control in maize, the untreated and hand-weeded controls (Onofri, unpublished data). Counts are expressed as number of weeds per square meters\n\nPlot (numeric): coding for the field plots\nHerbicide (character): code for the herbicide used or type of control\nBlock (numeric): code for the block in the RCBD\nColumns from 4 to 7 (numeric): counts of the number of plants per square meter",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#weedcover",
+    "href": "13-Appendices.html#weedcover",
+    "title": "13  Updated list of datasets",
+    "section": "WeedCover",
+    "text": "WeedCover\nResults of a survey, where the yield of maize was determined, as affected by the early determined covering of weeds. The dataset was simulated by Monte Carlo methods.\n\nWeedCover (numeric): ground covering of weeds (%)\nYield (numeric): yield of maize in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#weedmortality",
+    "href": "13-Appendices.html#weedmortality",
+    "title": "13  Updated list of datasets",
+    "section": "WeedMortality",
+    "text": "WeedMortality\nCounts of dead weeds out of 50, in 24 pots, treated with 6 herbicides and four replicates per herbicide.\n\nHerbicide (character): code for the herbicide sprayed in each pot\nnoWeeds (numeric): initial count of weed plants\nobsDead (numeric): count of dead plants per each pot\nMortality (numeric): Percentage of dead plants",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices.html#winterwheat-and-winterwheat2002",
+    "href": "13-Appendices.html#winterwheat-and-winterwheat2002",
+    "title": "13  Updated list of datasets",
+    "section": "WinterWheat and WinterWheat2002",
+    "text": "WinterWheat and WinterWheat2002\nA multi-year experiment was conducted to compare eight winter wheat genotypes, with an RCBD with three replicates in the hills of central Italy and repeated for seven years (Onofri and Ciriciofolo 2007). The dataset ‘WinterWheat2022’ only contains the data from the 2002 season.\n\nPlot (numeric): code for the plot\nBlock (numeric): code for the block within each year\nGenotype (character): name of the genotypes\nYield (numeric): grain yield in tons per hectare\nYear (numeric): the year in which the yield was measured\n\nToscano S, La Malfa T, Maio A., Bonanno E., Calderone F and Gresta F., 2026. Lettuce yield, quality and water productivity as affected by deficit irrigation and superabsorbent polymer dose. Horticulturae, in press.\n\n\n\n\nCovarelli, G, A Onofri (1998) Effects of timing of weed removal and emergence in sugarbeet. EWRS\n\n\nCristaudo, A, A Restuccia, A Onofri, VL Giudice, F Gresta (2015) Species-area relationships and minimum area in citrus grove weed communities. Plant Biosystems 149, 337–345\n\n\nKuehl, RO (2000) Design of experiments: Statistical principles of research design and analysis. Duxbury Press, Books\n\n\nLe Clerg, EL, WH Leonard, AG Clark (1962) Field plot technique. Burgess Publishing Company, USA\n\n\nLigabue, M, A Onofri, F Ruozzi (2009) Le migliori varietà di erba medica da seme. Agricoltura 84, 82–84\n\n\nMonotti, M, A Onofri, E Gargano, C Selmi, A Tagliaferri, L Craveri, D Severi, G Bruno, M Poli, G Bimbi, M Ginanni, E Moscheni, M Quattrucci, S Tavoletti, A Petrini, E Di Paolo, F Stagnari, G De Mastro, G Carboni, G Pruneddu, A Sarti, L Tonetti (2009) Azioni di innovazione e ricerca a supporto del piano proteine vegetali: Proteiche da granella. CRPA Editore, Reggio Emilia\n\n\nMuller-Dumbois, D, H Ellenberg (1974) Community sampling: The relevè method. Pages 45–66 in Aims and methods of vegetation ecology. John Wiley & Sons, Inc., Species/Area curves\n\n\nOnofri, A, E Ciriciofolo (2007) Using R to perform the AMMI analysis on agriculture variety trials. R NEWS 7, 14–19\n\n\nOnofri, A, L Covarelli, F Tei (1995) Efficacy of rimsulfuron and metribuzin against Solanum nigrum L. At different growth stages in tomato. ANPP, reprints\n\n\nOnofri, A, H-P Piepho, M Kozak (2019) Analysing censored data in agricultural research: A review with examples and software tips. Annals of Applied Biology 174, 3–13\n\n\nOnofri, A, F Tei (1994b) Influence of application timing on the effectiveness of rimsulfuron against rhizome Sorghum halepense (L.) Pers. Università degli Studi di Perugia, reprints\n\n\nOnofri, A, F Tei (1994a) Competitive ability and threshold levels for three broadleaf weed species in sunflower. Weed Research 34, 471–479\n\n\nPace, R, P Benincasa, ME Ghanem, M Quinet, S Lutts (2012) Germination of untreated and primed seeds in rapeseed (brassica napus var oleifera del.) under salinity and low matric potential. Experimental Agriculture 48, 238–251\n\n\nPannacci, E, D Pettorossi, F Tei (2013) Phytotoxic effects of aqueous extracts of sunflower on seed germination and growth of Sinapis alba L., Triticum aestivum L. And Lolium multiflorum Lam. Allelopathy Journal 32, 23\n\n\nPiepho, H-P (1998) Methods for comparing the yield stability of cropping systems - A review. Journal of Agronomy and Crop Science 180, 193–213\n\n\nStagnari, F, A Onofri, P Codianni, M Pisante (2013) Durum wheat varieties in N-deficient environments and organic farming: A comparison of yield, quality and stability performances. Plant Breeding 132, 266–275\n\n\nStagnari, F, A Onofri, JJ Jemison, M Monotti (2007) Improved multivariate analyses to discriminate the behaviour of faba bean varieties. Agronomy For Sustainable Development 27, 387–397\n\n\nVischetti, C, M Marini, M Businelli, A Onofri (1996) The effect of temperature and co-applied herbicides on the degradation rate of phenmedipham, chloridazon and metamitron in a clay loam soil in the laboratory. La Goliardica Pavese, Piacenza\n\n\nW., N (1972) A short life test for comparing a sample with previous accelerated test results. Technometrics 14, 175–185",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html",
+    "href": "13-Appendices1.html",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "",
+    "text": "adjuvantsLS\nApart from those listed in the book, the package statforbiology contains many other dataset and the list is continuously updated. In this section you will find the full list of available datasets.\nAn experiment to compare three adjuvants (ammonium sulfate, mineral oil, non-ionic surfactant, and a control with no adjuvant) for rimsulfuron, which is a herbicide for weed control in maize. The experiment was designed as a Latin square with five replicates (Onofri, unpublished data), and the resulting dataset was slightly modified to make it more suitable for teaching purposes.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#adjuvantsls",
+    "href": "13-Appendices1.html#adjuvantsls",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "",
+    "text": "Herbicide (character): herbicide name\nAdjuvant (character): adjuvant name\nDose (character): dose of the herbicide + adjuvant\nCode (character): code for the adjuvants\nPlot (numerical coding): code for the plots\nColumn (numerical coding): code for the column in the Latin square grid\nRow (numerical coding): code for the row in the Latin square grid\nColumns 8 to 23 (character): each column is a weed (identified by the respective Bayer code), and the values represent the abundances (Braun-Blanquet codes)\nYield (numeric): crop yield (100 kg per hectare)\nHeight (numeric): crop height (cm)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#alfalfa3years",
+    "href": "13-Appendices1.html#alfalfa3years",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "alfalfa3years",
+    "text": "alfalfa3years\nA genotype experiment in alfalfa (Ligabue et al. 2009) to compare 20 genotypes in central Italy (medium Tiber Valley). The experiment was laid out as an RCBD with four replicates and the total yearly forage yield (sum of 3-4 cuts per year) was measured in each plot over 3 years (from 2006 to 2008).\n\nPlot (numeric): code for the plot\nBlock (numeric): code for the block\nGenotype (character): name of the genotype\nYear (numeric): year when yield was measured\nYield (numeric): total yearly forage yield (sum of 3-4 cuts per year; in tons per hectare of dry matter)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#ammi94",
+    "href": "13-Appendices1.html#ammi94",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "Ammi94",
+    "text": "Ammi94\nA field experiment to evaluate the effect of different densities of Ammi majus on the achene yield of sunflower was performed in 1984 and published by Onofri and Tei (1994a). The values represent the means of 4 replicates.\n\nDensity (numeric): number of weed plants per square meter\nYield (numeric): sunflower yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#ammi94_YL",
+    "href": "13-Appendices1.html#ammi94_YL",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "Ammi94_YL",
+    "text": "Ammi94_YL\nThis dataset provides the results of a field experiment to evaluate the effect of different densities of Ammi majus on the achene yield of sunflower. This experiment represents the repetition in time (2 years later) of the experiment reported in the dataset ‘Ammi94’ and contains the full dataset (with replicates). These results were also published in Onofri and Tei (1994a). The values represent the means of 4 replicates.\n\nDensity (numeric): number of weed plants per square meter\nBlock (numeric): code for the blocks\nYield (numeric): sunflower yield in tons per hectare\nYield (numeric): sunflower yield in percentage of the average yield with no weeds\nYield loss (numeric): Yield loss with respect to the control with no weeds",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#augmentedFactorial",
+    "href": "13-Appendices1.html#augmentedFactorial",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "augmentedFactorial",
+    "text": "augmentedFactorial\nAn experiment to compare two herbicides (rimsulfuron and dicamba) at two rates (HIGH and LOW) and with four adjuvant treatments (surfactant, frigate, mineral oil and no adjuvant). Aside this fully crossed structure, we introduced the untreated and hand-weeded controls. The design is in complete blocks and it is termed ‘augmented factorial’, because some extra treatment levels has been included beyond the crossed factorial structure.\n\nPlot (numerical coding): plot number\nHerbicide (character): name of herbicides or controls\nAdjuvant (character): adjuvant name\nDoseF (character): code for the herbicide dose\nBlock (numerical coding): code for the block\nYield (numeric): maize yield (tons per hectare)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#BBsurvey",
+    "href": "13-Appendices1.html#BBsurvey",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "BBsurvey",
+    "text": "BBsurvey\nA field experiment aiming to compare the weed control abilities of nine post-emergence herbicides against Sorghum halepense in maize. Three weeks after the treatment, the cover-abundance of S. halepense was visually recorded in six classes, using the Braun-Blanquet method (Braun-Blanquet 1964).\n\nPlot (numeric): code for the plot\nHerbicide (character): code for the herbicide\nBBscore (character): Braun-Blanquet score (0, +, 1, 2, 3, 4, 5)\nL (numeric): lower limit of the ground covering class (%)\nU (numeric): upper limit of the ground covering class (%)\nmidPoint (numeric): centre of each ground covering class (%)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#beet",
+    "href": "13-Appendices1.html#beet",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "beet",
+    "text": "beet\nA split-plot tillage experiment in sugarbeet, where three types of tillage (minimum tillage = MIN; shallow plowing = SP; deep plowing = DP) and two types of chemical weed control methods (broadcast = TOT; in-furrow = PART) were compared in four complete blocks with three main-plots per block, split into two sub-plots per main-plot; the three types of tillage were randomly allocated to the main-plots in each block, while the two weed control treatments were randomly allocated to the sub-plots within each main-plot (Bianchi, 1992; unpublished data).\n\nTillage (character): tillage method\nWeedControl (character): weed control method\nBlock (numeric): code for the block\nYield (numeric): sugarbeet root yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#beetgrowth",
+    "href": "13-Appendices1.html#beetgrowth",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "beetGrowth",
+    "text": "beetGrowth\nAn experiment in which sugarbeet was grown either weed-free, or weed-infested (Covarelli and Onofri 1998). Crop weight per unit area (in kg/ha) was measured at six different timings (in Days After Emergence; DAE), using destructive methods from independent plots. The experiment was conducted using a completely randomized design with three replicates.\n\nDAE (numeric): Day After Emergence\nInfested (numeric): Crop Dry Weight in weed-infested plots (kg/ha)\nWeedFree (numeric): Crop Dry Weight in weed-free plots (kg/ha)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#brassica",
+    "href": "13-Appendices1.html#brassica",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "brassica",
+    "text": "brassica\nA short-term pot-bioassay to determine the phytotoxicity of imazethapyr was performed in hydroponic solution, using quartz-sand as a non sorptive media. The assay was performed at the ‘Institut für Unkrautforschung der Biologischen Bundesanstalt’ (Braunschweig, Germany) and the methods are described in Stalder and Pestemer (1980). The test plant was Brassica rapa and the results were published by Onofri (1994).\n\nDose (numeric): Herbicide concentration in soil solution (as mg/L)\nFW (numeric): Fresh weight of the test plant as grams per pot.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#citrusgrove-or-speciesarea",
+    "href": "13-Appendices1.html#citrusgrove-or-speciesarea",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "citrusGrove or speciesArea",
+    "text": "citrusGrove or speciesArea\nAn experiment was conducted in a citrus grove in Sicily (Southern Italy) to determine the species-area relationship for the local weed community. In this study, a nested-plot survey was employed (Muller-Dumbois and Ellenberg 1974) where the number of weed species was counted in a plot of 1 m2 surface and the sampling area was progressively doubled in size. At each step, the number of new weed species was counted. The dataset is taken from Cristaudo et al. (2015).\n\nArea (numeric): sampled area (in square meters)\nnumSpecies (numeric): count of the number of species",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#crosses",
+    "href": "13-Appendices1.html#crosses",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "crosses",
+    "text": "crosses\nAn experiment to compare nine maize hybrids, obtained from three pollinating inbred lines (A1, A2, and A3), each one crossed with three different female inbred lines (A1 was crossed with B1, B2, and B3, A2 was crossed with B4, B5, and B6, while A3 was crossed B7, B8, and B9). The experiment was laid out as complete blocks with four replicates (36 subjects in total). The dataset was generated through Monte Carlo simulation.\n\nMale (character): pollinating line\nFemale (character): female line\nBlock (numeric): code for the blocks\nYield (numeric): maize yield (in tons per hectare)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#fabaBeanSplitMet",
+    "href": "13-Appendices1.html#fabaBeanSplitMet",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "fabaBeanSplitMet",
+    "text": "fabaBeanSplitMet\nSix faba bean genotypes were tested at two sowing times using a split-plot design in four complete blocks. Sowing times were randomized to main-plots within blocks, and genotypes were randomized to sub-plots within main-plots and blocks. The experiment was repeated in three years and two locations of Central Italy. The dataset was taken from Stagnari et al. (2007).\n\nLocation (character): name of the location\nSeason (numeric): year of harvest\nSowing (character): sowing time\nGenotype (character): name of the genotype\nBlock (numeric): code for the block in each experiment\nYield (numeric): crop grain yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#failuretimes",
+    "href": "13-Appendices1.html#failuretimes",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "failureTimes",
+    "text": "failureTimes\nAn experiment to record the failure time of heating systems as affected by four different operating temperatures. The design was completely randomized with six replicates, and the number of hours before failure was measured. The dataset is taken from W. (1972).\n\nTemp (numeric): testing temperature (in \\(^{\\circ}\\)F)\nHours_to_failure (numeric): number of hours before failure",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#fertilizationtiming",
+    "href": "13-Appendices1.html#fertilizationtiming",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "FertilizationTiming",
+    "text": "FertilizationTiming\nA field experiment to evaluate the effect of fertilization timing (early, optimal, late) on two genotypes (A and B). The experiment was laid out as an RCBD, and the response represents the amount of absorbed nitrogen by the plant (simulated data).\n\nTiming (character): timing of fertilization (early, optimal, late)\nGenotype (character): genotype\nBlock (numeric): code for the block\nNabs (numeric): amount of absorbed nitrogen",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#fgp_rape",
+    "href": "13-Appendices1.html#fgp_rape",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "FGP_rape",
+    "text": "FGP_rape\nAn experiment where the germination of three genotypes of oilseed rape was assessed in controlled conditions, at 20 \\(^{\\circ}\\)C, according to an RCBD with six replicates. One replicate per genotype, consisting of a Petri dish with 50 seeds, was put in each of six shelves inside the oven. The number of germinated seeds was counted 15 days after the start of the assay and expressed as the Final Proportion of Germinated seeds (FGP). The assay was repeated twice in different and independent ovens with the same experimental design. The dataset is taken from Pace et al. (2012).\n\nDish (numeric): code for the Petri dish\nRun (numeric coding): code for the run\nShelf (numeric): code for the shelf\nSpecies (character): plant species\nGenotype (character): genotype\nFGP (numeric): Final Germinated Proportion in each dish",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#floristicData1",
+    "href": "13-Appendices1.html#floristicData1",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "floristicData1",
+    "text": "floristicData1\nAn experiment where the weed flora composed by 8 weed species was recorded in 120 plots, included in a three-factor factorial experiment in a randomised blocks design. The counts of weeds are reported and the dataset was modified from Scavo et al. (2020).\n\nF1 to F3 (character): the three experimental factors, respectively with 5, 2 and 3 levels\nRep (character): the blocks\nSP1 to SP8 (numeric): the counts for the eight weed species",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#heights",
+    "href": "13-Appendices1.html#heights",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "heights",
+    "text": "heights\nHighly unbalanced dataset, containing the height (cm) and yield (t/ha) of 20 maize plants belonging to 4 different genotypes. The dataset was generated through Monte Carlo simulation.\n\nId (numeric): code for the plot\nvar (character): code for the genotype\nheight (numeric): crop height (cm)\nyield (numeric): crop yield (t/ha)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#Hordeum_GR",
+    "href": "13-Appendices1.html#Hordeum_GR",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "Hordeum_GR",
+    "text": "Hordeum_GR\nThe germination rates of Hordeum spontaneum were studied, as affected by the environmental temperatures. This data was derived by germination assays at different temperatures, by using the dataset in Mesgaran et al. (2017), with some slight modifications of the technique described in that manuscript.\n\nTemp (numeric): Environmental temperature (in °C)\nT50 (numeric): Median time to germination for the seed lot under study (in hours)\nGR50 (numeric): Median germination rate (as hours-1)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#insects",
+    "href": "13-Appendices1.html#insects",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "insects",
+    "text": "insects\nAn experiment in which tobacco plants were treated with three different insecticides was conducted using a completely randomized design with five replicates (resulting in a total of fifteen plants). The number of insects over the surface of leaves in each plant was counted three weeks after the treatments.\n\nInsecticide (character): code for the insecticide\nRep (numeric): code for the replicate (not blocks)\nCount (numeric). count of insects",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#johnsongrass",
+    "href": "13-Appendices1.html#johnsongrass",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "johnsongrass",
+    "text": "johnsongrass\nA pot experiment to evaluate the best timing for herbicide application against Sorghum halepense originated by rhizomes. Five timings were compared including a split treatment (2-3, 4-5, 6-7, 8-9, and 3-4/8-9 leaves), and an untreated check was added for comparison. Treatments were repeated on plants originating from rhizomes of different lengths (2, 4, and 6 nodes). The design was a fully crossed two-way factorial, laid out as completely randomized with four replicates. The dataset is taken from Onofri and Tei (1994b).\n\nLength (character): length of rhizomes at the beginning of the experiment\nTiming (character): crop stage at spraying\nRizomeWeight (numeric): weight of rhizomes four weeks after spraying (in grams per pot)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#leclerg",
+    "href": "13-Appendices1.html#leclerg",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "LeClerg",
+    "text": "LeClerg\nA genotype experiment in a completely randomized design, with five genotypes and four replicates. The dataset is modified from (Le Clerg et al. 1962).\n\nVariety (character): code for the genotype\nYield (numeric): crop yield in bushels per acre",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#lepidopteraeggs",
+    "href": "13-Appendices1.html#lepidopteraeggs",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "LepidopteraEggs",
+    "text": "LepidopteraEggs\nAn entomologist counted the number of eggs laid by a species of moth, on three different substrates using a completely randomized design with 15 replicates. This dataset was modified from Kuehl (2000).\n\nSubstrate (character): code for the substrate\nNo_of_eggs (numeric): count of the number of eggs",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#lettucels",
+    "href": "13-Appendices1.html#lettucels",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "lettuceLS",
+    "text": "lettuceLS\nAn experiment to assess the effect of four different fertilizers on lettuce yield. The experiment was laid out as a Latin square with four replicates. The dataset was generated through Monte Carlo simulation.\n\nFertilizer (character): code for the fertilizer\nRow (numeric): code for the row in the Latin square grid\nColumn (numeric): code for the column in the Latin square grid\nYield (numeric): lettuce yield (in kg per hectare \\(\\times\\) 100)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#maizeMET",
+    "href": "13-Appendices1.html#maizeMET",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "maizeMET",
+    "text": "maizeMET\nA multi-environment experiment in mazie, with four genotypes and 14 environments. The data represent the average yields for each genotype in each environment. This dataset is presented in Piepho (1998) and it can be used to reproduce the analyses presented there.\n\nEnv (numeric coding): code for the environment\nGen (character): code for the genotype\nYield (numeric): maize yield in tons per hectar",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#metamitron",
+    "href": "13-Appendices1.html#metamitron",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "metamitron",
+    "text": "metamitron\nAn experiment to study the degradation of the herbicide metamitron (M) in soil, either alone or in the presence of two co-applied herbicides, i.e. phenmedipham (P) and chloridazon (C). Ninety-six independent soil samples were treated with four herbicide combinations (i.e., M, M+P, M+C, and M+P+C, 32 samples per combination) and stored in a climatic chamber at 20\\(^{\\circ}\\)C. Three random soil samples were collected for each herbicide combination at eight different time points (0, 7, 14, 21, 32, 42, 55 and 67 days after treatment). Theu were stored in a refrigerator until chemical analyses. At the end of the experiment, all soil samples were analyzed to determine the residual concentration of metamitron. This dataset is taken from Vischetti et al. (1996), and it has been modified through Monte Carlo simulation, to make it more suitable for teaching purposes.\n\nTime (numeric): the time at sampling (in Days after the treatment)\nHerbicide (character): code for the herbicide combination\nRep (numeric): code for the replicate (not blocks; the experiment was fully randomized)\nConc (numeric): the concentration of metamitron in % of the initial value",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#missingval",
+    "href": "13-Appendices1.html#missingval",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "missingVal",
+    "text": "missingVal\nA fertilization trial was conducted according to a randomized complete block design with five replicates; however, due to unforeseen circumstances, one value is missing for the ‘50N’ treatment in the second block.\n\nFert (character): fertilization treatment\nBlock (numeric): code for the block\nP2O5 (numeric): content of P2O5 in leaves (%)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#mixture",
+    "href": "13-Appendices1.html#mixture",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "mixture",
+    "text": "mixture\nA pot experiment to compare weed control efficacy of two herbicides used alone and in a mixture. A control was also added as a reference, and thus, the four treatments were (i) Metribuzin, (ii) Rimsulfuron, (iii) Metribuzin + rimsulfuron, and (iv) the untreated control. Sixteen uniform pots were prepared and sown with Solanum nigrum. When the plants reached the 4-true-leaf stage, the pots were sprayed with the above herbicide solution following a completely randomized design with four replicates. Three weeks after the treatment, the plants in each pot were harvested and weighed: the lower the weight, the higher the efficacy of herbicides. The dataset is taken from (Onofri et al. 1995).\n\nTreat (character): herbicide treatment\nWeight (numeric): dry weight of weed plants (grams per pot)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#ngenotype-and-ngenotypefull",
+    "href": "13-Appendices1.html#ngenotype-and-ngenotypefull",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "NGenotype and NGenotypeFull",
+    "text": "NGenotype and NGenotypeFull\nFifteen genotypes of durum wheat were compared under two different N fertilization strategies (in the dataset ‘NGenotype’ the number of genotypes has been reduced to 5). The dataset was generated through Monte Carlo simulation that started from the original data in Stagnari et al. (2013).\n\nBlock (numeric): code for the block\nGenotype (character): code for the genotype\nNitrogen (numeric): code for the fertilization strategy\nYield (numeric): wheat yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#nwheat",
+    "href": "13-Appendices1.html#nwheat",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "NWheat",
+    "text": "NWheat\nA N fertilization experiment was conducted in wheat using a randomized complete block design, with four N doses and four replicates. The dataset was generated through Monte Carlo simulation.\n\nDose (numeric): N fertilization rate (Kg/ha)\nBlock (numeric): code for the block\nYield (numeric): crop yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#oat1l",
+    "href": "13-Appendices1.html#oat1l",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "Oat1L",
+    "text": "Oat1L\nA field experiment was laid out as a CRD with three replicates to compare five genotypes of oat in one location. The data was generated through Monte Carlo simulation.\n\nGenotype (character): code for the genotype\nYield (numeric): oat yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#oat2l",
+    "href": "13-Appendices1.html#oat2l",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "Oat2L",
+    "text": "Oat2L\nThe same experiment as for ‘Oat1L’ was repeated in a second location, also with a completely randomized layout. Also the data for the second location were generated through Monte Carlo simulation.\n\nLocation (character): code for the location\nGenotype (character): code for the genotype\nYield (numeric): oat yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#orangeirrigation",
+    "href": "13-Appendices1.html#orangeirrigation",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "orangeIrrigation",
+    "text": "orangeIrrigation\nAn irrigation experiment was conducted in an orange grove in Southern Italy, comprising five irrigation systems in five complete blocks. The dataset was simulated by Monte Carlo methods.\n\nMethod (character): irrigation systems\nBlock (numeric): code for the block\nYield (numeric): orange yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#pea_multiloc",
+    "href": "13-Appendices1.html#pea_multiloc",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "pea_MultiLoc",
+    "text": "pea_MultiLoc\nA multi-location genotype experiment in field pea, to compare 17 genotypes in 12 locations. In each location, the experiment was laid out as an RCBD, with four blocks. The dataset was generated through Monte Carlo simulation, starting from the data in Monotti et al. (2009).\n\nId (numeric): code for the plot\nLoc (character): code for the location\nVar (character): code for the genotype\nBlock (character): code for the block\nYield (numeric): pea yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#rainfall2022",
+    "href": "13-Appendices1.html#rainfall2022",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "Rainfall2022",
+    "text": "Rainfall2022\nDaily rainfall amounts (mm) in central Italy in 2022 from a local meteorological station.\n\nDOY (numeric): Day Of the Year\nPRP (numeric): amount of daily rainfall (mm per day)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#recrops",
+    "href": "13-Appendices1.html#recrops",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "recropS",
+    "text": "recropS\nRimsulfuron was applied at the recommended rate on bare soil, and untreated plots were included for comparison. Forty days after the treatment, sugarbeet, rape and soybean were sown on treated and untreated plots, and the weight of the plants was determined four weeks after sowing. The experiment was laid down as a strip-plot in complete blocks: in each block, the herbicide treatments (rimsulfuron and the untreated control) were randomly allocated to each of two columns, while the three crops were randomly allocated to each of three rows (Onofri, unpublished data).\n\nHerbicide (Character): name of the herbicide treatment\nCrop (character): name of the crop\nBlock (numeric): code for the block\nCropBiomass (numeric): weight of crop biomass four weeks after sowing",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#rimsulfuron",
+    "href": "13-Appendices1.html#rimsulfuron",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "rimsulfuron",
+    "text": "rimsulfuron\nA herbicide experiment where rimsulfuron was used with different timings and in different mixtures and compared to several other herbicide solutions for weed control in maize. At the end of the crop cycle, herbicide efficacy was assessed by measuring the coverage of weeds (%) and the yield of maize (in 100 kg per hectare).\n\nHerbicide (character): name of the herbicide treatment\nPlot (numeric): code for the plot\nCode (numeric): code for the herbicide\nBlock (numeric): code for the block\nColumn (numeric): code for the column within each block\nWeedCover (numeric): coverage of weeds (in %)\nYield (numeric): maize yield (in 100 kg per hectare)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#sadocchi_man",
+    "href": "13-Appendices1.html#sadocchi_man",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "sadocchi_man",
+    "text": "sadocchi_man\nExemplary and simple dataset for multivariate analyses, such as MANOVA. It refers to a completely randomised, two-factor factorial experiment, with two numeric responses. The dataset was taken from Sadocchi (1987).\n\na (numerical coding): levels for the experimental factor ‘a’\nb (numerical coding): levels for the experimental factor ‘b’\ny1 (numeric): 1st quantitative response variable\ny2 (numeric): 2nd quantitative response variable",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#seedBank",
+    "href": "13-Appendices1.html#seedBank",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "seedBank",
+    "text": "seedBank\nSix rotations were compared in two agricultural systems (BIO and LOW) on a complete block design with three replicates. After six years, 10 soil cores were taken from each sub-plot and soil seed bank was counted. Dataset was taken from Graziani et al. (2012) and it was modified to meet teaching purposes.\n\nSample (numeric): cod for each soil core\nBlock (numerical coding): code for the block\nPlot (numerical coding): code for plots\nTreatment (numerical coding): code for treatment levels (12 combinations)\nSystem (character): the systems under comparison\nRotation (character): the rotations under comparison\nnoSeeds (numeric): counts of weed seed in each soil core",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#sinapis",
+    "href": "13-Appendices1.html#sinapis",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "Sinapis",
+    "text": "Sinapis\nA study was conducted to evaluate the effect of increasing densities of a weed (Sinapis arvensis) on sunflower yield (tons per hectare). The dataset was taken from Onofri and Tei (1994a).\n\ndensity (numeric): weed density in plants per square meter\nblock (numeric): code for the block\nyield (numeric): sunflower grain yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#SOLNI_hormesis",
+    "href": "13-Appendices1.html#SOLNI_hormesis",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "SOLNI_hormesis",
+    "text": "SOLNI_hormesis\nA pot-bioassay study was conducted to evaluate the efficacy of rimsulfuron against Solanum nigrum at the 4-leaf stage. The effect was assessed by weighing the plants in each pot 21 days after the treatment; the response curve shows clear signs of stimulation at low herbicide doses (hormesis). The dataset was taken from Onofri et al. (1995).\n\nDose (numeric): rimsulfuron dose (g/ha)\nblock (numeric): weight of treated plants (grams per pot)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#sowingtime",
+    "href": "13-Appendices1.html#sowingtime",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "SowingTime",
+    "text": "SowingTime\nSix faba bean genotypes were tested at two sowing times using a split-plot design in four complete blocks. Sowing times were randomized to main-plots within blocks, and genotypes were randomized to sub-plots within main-plots and blocks. The dataset was taken from Stagnari et al. (2007).\n\nPlot (numeric): code for the plot\nSowingTime (character): sowing season\nGenotype (character): name of the genotype\nBlock (numeric): code for the block\nYield (numeric): crop grain yield in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#StarchGrain_g",
+    "href": "13-Appendices1.html#StarchGrain_g",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "starchGrain_g",
+    "text": "starchGrain_g\nThis dataset refers to an experiment which aimed to compare the diameters of starch grains from tubers of two potato producers. Starch grains were sampled from tubers collected from the production fields of the producers. The dataset shows the counts of starch grains assigned to one of five diameter classes (&lt;4, [4−8[, [8−12[, [12−16[,≥16 \\(\\mu m\\)). For each producer, the diameters were measured from twelve photos taken with a microscope. The original dataset is in a grouped form and one record represents a photo (12 photos per each producer). The dataset was taken from Onofri et al. (2019)\n\nGroup (character): the producer\nPhoto (numeric): code for each photo\nc1-c5 (numeric): the counts of individual in each class",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#StarchGrain_u",
+    "href": "13-Appendices1.html#StarchGrain_u",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "starchGrain_u",
+    "text": "starchGrain_u\nSame dataset as ‘StarchGrain_g’, but in ungrouped form (one row for each starch grain).\n\nPhoto (numeric): code for each photo\nGroup (character): the producer\nClass (character): the diameter class to which each grain belongs (c1 to c5)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#StarchGrain_s",
+    "href": "13-Appendices1.html#StarchGrain_s",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "starchGrain_s",
+    "text": "starchGrain_s\nSame dataset as ‘StarchGrain_g’, but in censored ‘long’ form (one row for each starch grain), where the class is represented by using the lower and upper diameter values whithin which the real diameter value is comprised.\n\nPhoto (numeric): code for each photo\nGroup (character): the producer\nsizeLow (numeric): the lower limit for the diameter class\nsizeUp (numeric): the upper limit for the diameter class\nClass (character): the diameter class to which each grain belongs (c1 to c5)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#sugarsmedia",
+    "href": "13-Appendices1.html#sugarsmedia",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "sugarsMedia",
+    "text": "sugarsMedia\nPlant tissues of tomato were grown in tissue cultures using three types of media, each based on the addition of a specific amount of either glucose, fructose, or sucrose to the control. The experiment was conducted using a completely randomized design with five replicates, and the growth of cells was recorded for each subject. The dataset was generated through Monte Carlo simulation, starting from the original data in Kuehl (2000).\n\nSugar (character): type of substrate\nGrowth (numeric): tissue growth in mm",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#Sunflower",
+    "href": "13-Appendices1.html#Sunflower",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "Sunflower",
+    "text": "Sunflower\nWater extracts of two sunflower varieties were compared in terms of phytotoxicity to the same test-plant (Sinapis alba). Several lots of 50 seeds of S. alba were put in Petri dishes and moistened with water extracts at increasing concentrations (three replicated Petri dishes for each of four concentration levels, including the untreated control). Radicle lengths were determined seven days after the treatment. The experiment was planned with a CRD. Data are taken from Pannacci et al. (2010).\n\nDose (numeric): concentration of extracts (g d.m. in 100 mL of water)\nRep (numeric): code for the replicate\nVar (character): name of sunflower varieties\nLength (numeric): root lengths in mm",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#timings_77490",
+    "href": "13-Appendices1.html#timings_77490",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "Timings_77490",
+    "text": "Timings_77490\nA field experiment with maize in which rimsulfuron was used post-emergence in maize at 4 different timings and compared to the untreated unweeded control. The aim was to assess the selectivity of the herbicide for the crop, depending on the moment of intervention. One value is missing due to an unforeseen event. The dataset is taken from Onofri (unpublished data).\n\nPlot (numeric): code for the plot\nTiming (character): timing of weed control as the number of maize leaves\nBlock (numeric): code for the the block\nHeight_30 (numeric): height of maize (cm) on 30 June (cm)\nWeight_30 (numeric): average weight of maize plants (g per plant) on 30 June\nFinalYield (numeric): grain yield of maize in kg/ha \\(\\times\\) 100",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#tkw",
+    "href": "13-Appendices1.html#tkw",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "TKW",
+    "text": "TKW\nAn experiment with 30 genotypes in three blocks, where the Weight of Thousand Kernels (TKW) was recorded in three sub-samples per plot (Ciriciofolo, unpublished data)\n\nPlot (numeric): code for the plot\nBlock (numeric): code for the block\nGenotype (character): name of the genotype\nSample (numeric): code for the subsample in each plot\nTKW (numeric): weight of 1000 wheat kernels (g)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#tripleuspermum",
+    "href": "13-Appendices1.html#tripleuspermum",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "Tripleuspermum",
+    "text": "Tripleuspermum\nPlants of Tripleuspermum inodorum were treated with a sulphonylurea herbicide (tribenuron-methyl) at increasing doses, and the fresh weight of the treated plants per pot was recorded 3 weeks after treatment. The experiment was completely randomized with three replicates and conducted at the Department of Integrated Pest Management, University of Aarhus, Denmark (Pannacci et al. 2013).\n\nDose (numeric): Dose of tribenuron-methyl (in g/ha)\nFreshWeight (numeric): weight of plants 3 weeks after the treatment (in grams per pot)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#waterProductivity",
+    "href": "13-Appendices1.html#waterProductivity",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "waterProductivity",
+    "text": "waterProductivity\nWater productivity was studied by Toscano et al. (2026) in lattuce, as affected by deficit irrigation. A pot experiment was performed in Sicily (Messina, Southern Italy), considering four irrigation volumes (100%, 75%, 50% and 25% of contained water capacity) on an experiment with four replicates. Water productivity was calculated for each plot as the ratio between above ground fresh biomass (g plant-1) and the cumulative net water input (L plant-1). The dataset was generated through Monte Carlo simulation, that started from the original data in Toscano et al (2026) and considered a completely randomised design, for the sake of simplicity.\n\nRegime (numeric): irrigation volume (in % of contained water capacity)\nWP (numeric): water productivity as the ratio between above ground fresh biomass (g plant-1) and the cumulative net water input (L plant-1)",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#weedcounts",
+    "href": "13-Appendices1.html#weedcounts",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "WeedCounts",
+    "text": "WeedCounts\nCounts of three weed species (CHEAL: Chenopodium album, CHEHY: C. hybridum, and CHEPO: C. polyspermum) in twenty random quadrats in a field of central Italy (Onofri, unpublished data).\n\nSpecies (character): the weed species, identified by its Bayer code\nRep (numeric): code for the quadrat\nCount (numeric): count of the number of plants per quadrat",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#weedcountstrial",
+    "href": "13-Appendices1.html#weedcountstrial",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "WeedCountTrial",
+    "text": "WeedCountTrial\nCounts of weeds (ECHCG: Echinochloa crus-galli, AMARE: Amaranthus retroflexus, CHEAL: Chenopodium album, OTHER: other weed species) in an herbicide trial performed in central Italy, to compare 13 herbicides for weed control in maize, the untreated and hand-weeded controls (Onofri, unpublished data). Counts are expressed as number of weeds per square meters\n\nPlot (numeric): coding for the field plots\nHerbicide (character): code for the herbicide used or type of control\nBlock (numeric): code for the block in the RCBD\nColumns from 4 to 7 (numeric): counts of the number of plants per square meter",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#weedcover",
+    "href": "13-Appendices1.html#weedcover",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "WeedCover",
+    "text": "WeedCover\nResults of a survey, where the yield of maize was determined, as affected by the early determined covering of weeds. The dataset was simulated by Monte Carlo methods.\n\nWeedCover (numeric): ground covering of weeds (%)\nYield (numeric): yield of maize in tons per hectare",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#weedmortality",
+    "href": "13-Appendices1.html#weedmortality",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "WeedMortality",
+    "text": "WeedMortality\nCounts of dead weeds out of 50, in 24 pots, treated with 6 herbicides and four replicates per herbicide.\n\nHerbicide (character): code for the herbicide sprayed in each pot\nnoWeeds (numeric): initial count of weed plants\nobsDead (numeric): count of dead plants per each pot\nMortality (numeric): Percentage of dead plants",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#winterwheat-and-winterwheat2002",
+    "href": "13-Appendices1.html#winterwheat-and-winterwheat2002",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "WinterWheat and WinterWheat2002",
+    "text": "WinterWheat and WinterWheat2002\nA multi-year experiment was conducted to compare eight winter wheat genotypes, with an RCBD with three replicates in the hills of central Italy and repeated for seven years (Onofri and Ciriciofolo 2007). The dataset ‘WinterWheat2022’ only contains the data from the 2002 season.\n\nPlot (numeric): code for the plot\nBlock (numeric): code for the block within each year\nGenotype (character): name of the genotypes\nYield (numeric): grain yield in tons per hectare\nYear (numeric): the year in which the yield was measured",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "13-Appendices1.html#references",
+    "href": "13-Appendices1.html#references",
+    "title": "13  Appendix: Updated list of datasets",
+    "section": "13.1 References",
+    "text": "13.1 References\n\n\nBraun-Blanquet, J (1964) Pflanzensoziologie: Grundzüge der vegetationskunde. 3rd ed. Springer-Verlag, Vienna, New York\n\n\nCovarelli, G, A Onofri (1998) Effects of timing of weed removal and emergence in sugarbeet. EWRS\n\n\nCristaudo, A, A Restuccia, A Onofri, VL Giudice, F Gresta (2015) Species-area relationships and minimum area in citrus grove weed communities. Plant Biosystems 149, 337–345\n\n\nGraziani, F, A Onofri, E Pannacci, F Tei, M Guiducci (2012) Size and composition of weed seedbank in long-term organic and conventional low-input cropping systems. European Journal of Agronomy 39, 52–61\n\n\nKuehl, RO (2000) Design of experiments: Statistical principles of research design and analysis. Duxbury Press, Books\n\n\nLe Clerg, EL, WH Leonard, AG Clark (1962) Field plot technique. Burgess Publishing Company, USA\n\n\nLigabue, M, A Onofri, F Ruozzi (2009) Le migliori varietà di erba medica da seme. Agricoltura 84, 82–84\n\n\nMesgaran, MB, A Onofri, HR Mashhadi, RD Cousens (2017) Water availability shifts the optimal temperatures for seed germination: A modelling approach. Ecological Modelling 351, 87–95\n\n\nMonotti, M, A Onofri, E Gargano, C Selmi, A Tagliaferri, L Craveri, D Severi, G Bruno, M Poli, G Bimbi, M Ginanni, E Moscheni, M Quattrucci, S Tavoletti, A Petrini, E Di Paolo, F Stagnari, G De Mastro, G Carboni, G Pruneddu, A Sarti, L Tonetti (2009) Azioni di innovazione e ricerca a supporto del piano proteine vegetali: Proteiche da granella. CRPA Editore, Reggio Emilia\n\n\nMuller-Dumbois, D, H Ellenberg (1974) Community sampling: The relevè method. Pages 45–66 in Aims and methods of vegetation ecology. John Wiley & Sons, Inc., Species/Area curves\n\n\nOnofri, A (1994) Applicazione di modelli empirici di regressione non-lineare in ricerche di lotta alle malerbe. Tesi di dottorato di ricerca in \"Produttività delle piante coltivate\", VI ciclo, Universit...degli Studi di Perugia, Istituto di Agronomia generale e Coltivazioni erbacee, 138pp., Perugia\n\n\nOnofri, A, E Ciriciofolo (2007) Using R to perform the AMMI analysis on agriculture variety trials. R NEWS 7, 14–19\n\n\nOnofri, A, L Covarelli, F Tei (1995) Efficacy of rimsulfuron and metribuzin against Solanum nigrum L. At different growth stages in tomato. ANPP, reprints\n\n\nOnofri, A, H-P Piepho, M Kozak (2019) Analysing censored data in agricultural research: A review with examples and software tips. Annals of Applied Biology 174, 3–13\n\n\nOnofri, A, F Tei (1994b) Influence of application timing on the effectiveness of rimsulfuron against rhizome Sorghum halepense (L.) Pers. Università degli Studi di Perugia, reprints\n\n\nOnofri, A, F Tei (1994a) Competitive ability and threshold levels for three broadleaf weed species in sunflower. Weed Research 34, 471–479\n\n\nPace, R, P Benincasa, ME Ghanem, M Quinet, S Lutts (2012) Germination of untreated and primed seeds in rapeseed (brassica napus var oleifera del.) under salinity and low matric potential. Experimental Agriculture 48, 238–251\n\n\nPannacci, E, D Pettorossi, G Covarelli (2010) Allelopathic effects of sunflower (\\textit{Helianthus annuus} L.) extracts on seed germination and growth of \\textit{Sinapis alba} L., \\textit{Triticum aestivum} L. And \\textit{Lolium multiflorum} Lam. EWRS, Kaposvr (Hungary)\n\n\nPannacci, E, D Pettorossi, F Tei (2013) Phytotoxic effects of aqueous extracts of sunflower on seed germination and growth of Sinapis alba L., Triticum aestivum L. And Lolium multiflorum Lam. Allelopathy Journal 32, 23\n\n\nPiepho, H-P (1998) Methods for comparing the yield stability of cropping systems - A review. Journal of Agronomy and Crop Science 180, 193–213\n\n\nSadocchi, S (1987) Manuale di Analisi statistica Multivariata£rd Edition. Franco Angeli Libri srl, Milano, Italy\n\n\nScavo, A, A Restuccia, S Lombardo, S Fontanazza, C Abbate, G Pandino, U Anastasi, A Onofri, G Mauromicale (2020) Improving soil health, weed management and nitrogen dynamics by Trifolium subterraneum cover cropping. Agronomy for Sustainable Development 40\n\n\nStagnari, F, A Onofri, P Codianni, M Pisante (2013) Durum wheat varieties in N-deficient environments and organic farming: A comparison of yield, quality and stability performances. Plant Breeding 132, 266–275\n\n\nStagnari, F, A Onofri, JJ Jemison, M Monotti (2007) Improved multivariate analyses to discriminate the behaviour of faba bean varieties. Agronomy For Sustainable Development 27, 387–397\n\n\nStalder, L, W Pestemer (1980) Availability to plants of herbicide residues in soil. Part I: A rapid method for estiming potentially available residues of herbicides. Weed Research 20, 341–347\n\n\nToscano, S, T La Malfa, A Maio, E Bonanno, F Calderone, F Gresta (2026) Lettuce yield, quality and water productivity as affected by deficit irrigation and superabsorbent polymer dose. Horticulture In press\n\n\nVischetti, C, M Marini, M Businelli, A Onofri (1996) The effect of temperature and co-applied herbicides on the degradation rate of phenmedipham, chloridazon and metamitron in a clay loam soil in the laboratory. La Goliardica Pavese, Piacenza\n\n\nW., N (1972) A short life test for comparing a sample with previous accelerated test results. Technometrics 14, 175–185",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Appendix: Updated list of datasets</span>"
+    ]
+  },
+  {
+    "objectID": "08-AssunzioniBase.html",
+    "href": "08-AssunzioniBase.html",
+    "title": "8  Checking fitted models",
+    "section": "",
+    "text": "Nothing to add, yet",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Checking fitted models</span>"
+    ]
+  }
+]

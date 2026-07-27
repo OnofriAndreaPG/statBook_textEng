@@ -1,0 +1,3 @@
+# Checking fitted models
+
+Nothing to add, yet

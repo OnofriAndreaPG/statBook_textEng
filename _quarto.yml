@@ -1,0 +1,37 @@
+project:
+  type: book
+
+book:
+  title: "Field Research Methods in Agriculture"
+  subtitle: "Supplemental material"
+  author: "Andrea Onofri"
+  date: "7/27/2026"
+  chapters:
+    - index.qmd
+    - 01-ScienceData.qmd
+    - 02-ExperimentalLayOut.qmd
+    - 03-DescriptiveStats.qmd
+    - 04-CauseEffect.qmd
+    - 05-StochasticModels.qmd
+    - 06-Inference.qmd
+    - 07-TestIpotesi.qmd
+    - 08-AssunzioniBase.qmd
+    - 09-MCP.qmd
+    - 10-PuttingTogether.qmd
+    - 11-ExtendingRegression.qmd
+    - 12-IntroMixed.qmd
+    - 13-Appendices1.qmd
+
+bibliography: statBook.bib
+csl: _weed-research.csl
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+
+
+

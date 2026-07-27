@@ -1,0 +1,493 @@
+# Appendix: Updated list of datasets
+
+Apart from those listed in the book, the package `statforbiology` contains many other dataset and the list is continuously updated. In this section you will find the full list of available datasets.
+
+
+## `adjuvantsLS` {#adjuvantsls .unnumbered}
+
+An experiment to compare three adjuvants (ammonium sulfate, mineral oil, non-ionic surfactant, and a control with no adjuvant) for rimsulfuron, which is a herbicide for weed control in maize. The experiment was designed as a Latin square with five replicates (Onofri, unpublished data), and the resulting dataset was slightly modified to make it more suitable for teaching purposes.
+
+1. Herbicide (character): herbicide name
+2. Adjuvant (character): adjuvant name
+3. Dose (character): dose of the herbicide + adjuvant
+4. Code (character): code for the adjuvants
+5. Plot (numerical coding): code for the plots
+6. Column (numerical coding): code for the column in the Latin square grid
+7. Row (numerical coding): code for the row in the Latin square grid
+8. Columns 8 to 23 (character): each column is a weed (identified by the respective Bayer code), and the values represent the abundances (Braun-Blanquet codes)
+9. Yield (numeric): crop yield (100 kg per hectare)
+10. Height (numeric): crop height (cm)
+
+## `alfalfa3years` {#alfalfa3years .unnumbered}
+
+A genotype experiment in alfalfa [@ligabue_2009] to compare 20 genotypes in central Italy (medium Tiber Valley). The experiment was laid out as an RCBD with four replicates and the total yearly forage yield (sum of 3-4 cuts per year) was measured in each plot over 3 years (from 2006 to 2008).
+
+1. Plot (numeric): code for the plot
+2. Block (numeric): code for the block
+3. Genotype (character): name of the genotype
+4. Year (numeric): year when yield was measured
+5. Yield (numeric): total yearly forage yield (sum of 3-4 cuts per year; in tons per hectare of dry matter)
+
+## `Ammi94` {#ammi94 .unnumbered}
+
+A field experiment to evaluate the effect of different densities of *Ammi majus* on the achene yield of sunflower was performed in 1984 and published by @onofri_1994. The values represent the means of 4 replicates.
+
+1. Density (numeric): number of weed plants per square meter
+2. Yield (numeric): sunflower yield in tons per hectare
+
+## `Ammi94_YL` {#ammi94_YL .unnumbered}
+
+This dataset provides the results of a field experiment to evaluate the effect of different densities of *Ammi majus* on the achene yield of sunflower. This experiment represents the repetition in time (2 years later) of the experiment reported in the dataset 'Ammi94' and contains the full dataset (with replicates). These results were also published in @onofri_1994. The values represent the means of 4 replicates.
+
+1. Density (numeric): number of weed plants per square meter
+2. Block (numeric): code for the blocks
+3. Yield (numeric): sunflower yield in tons per hectare
+4. Yield (numeric): sunflower yield in percentage of the average yield with no weeds
+5. Yield loss (numeric): Yield loss with respect to the control with no weeds
+
+
+## `augmentedFactorial` {#augmentedFactorial .unnumbered}
+
+An experiment to compare two herbicides (rimsulfuron and dicamba) at two rates (HIGH and LOW) and with four adjuvant treatments (surfactant, frigate, mineral oil and no adjuvant). Aside this fully crossed structure, we introduced the untreated and hand-weeded controls. The design is in complete blocks and it is termed 'augmented factorial', because some extra treatment levels has been included beyond the crossed factorial structure.
+
+1. Plot (numerical coding): plot number
+2. Herbicide (character): name of herbicides or controls
+3. Adjuvant (character): adjuvant name
+4. DoseF (character): code for the herbicide dose
+5. Block (numerical coding): code for the block
+6. Yield (numeric): maize yield (tons per hectare)
+
+## `BBsurvey` {#BBsurvey .unnumbered}
+
+A field experiment aiming to compare the weed control abilities of nine post-emergence herbicides against *Sorghum halepense* in maize. Three weeks after the treatment, the cover-abundance of *S. halepense* was visually recorded in six classes, using the Braun-Blanquet method [@BraunBlanquet_1964].
+
+1. Plot (numeric): code for the plot
+2. Herbicide (character): code for the herbicide
+3. BBscore (character): Braun-Blanquet score (0, +, 1, 2, 3, 4, 5)
+4. L (numeric): lower limit of the ground covering class (%)
+5. U (numeric): upper limit of the ground covering class (%)
+6. midPoint (numeric): centre of each ground covering class (%)
+
+## `beet` {#beet .unnumbered}
+
+A split-plot tillage experiment in sugarbeet, where three types of tillage (minimum tillage = MIN; shallow plowing = SP; deep plowing = DP) and two types of chemical weed control methods (broadcast = TOT; in-furrow = PART) were compared in four complete blocks with three main-plots per block, split into two sub-plots per main-plot; the three types of tillage were randomly allocated to the main-plots in each block, while the two weed control treatments were randomly allocated to the sub-plots within each main-plot (Bianchi, 1992; unpublished data).
+
+1. Tillage (character): tillage method
+2. WeedControl (character): weed control method
+3. Block (numeric): code for the block
+4. Yield (numeric): sugarbeet root yield in tons per hectare
+
+## `beetGrowth` {#beetgrowth .unnumbered}
+
+An experiment in which sugarbeet was grown either weed-free, or weed-infested [@covarelli_1998]. Crop weight per unit area (in kg/ha) was measured at six different timings (in Days After Emergence; DAE), using destructive methods from independent plots. The experiment was conducted using a completely randomized design with three replicates.
+
+1. DAE (numeric): Day After Emergence
+2. Infested (numeric): Crop Dry Weight in weed-infested plots (kg/ha)
+3. WeedFree (numeric): Crop Dry Weight in weed-free plots (kg/ha)
+
+## `brassica` {#brassica .unnumbered}
+
+A short-term pot-bioassay to determine the phytotoxicity of imazethapyr was performed in hydroponic solution, using quartz-sand as a non sorptive media. The assay was performed at the 'Institut für Unkrautforschung der Biologischen Bundesanstalt' (Braunschweig, Germany) and the methods are described in @stalder_1980. The test plant was *Brassica rapa* and the results were published by @onofri_1994c.
+
+1. Dose (numeric): Herbicide concentration in soil solution (as mg/L)
+2. FW (numeric): Fresh weight of the test plant as grams per pot.
+
+## `citrusGrove` or `speciesArea` {#citrusgrove-or-speciesarea .unnumbered}
+
+An experiment was conducted in a citrus grove in Sicily (Southern Italy) to determine the species-area relationship for the local weed community. In this study, a nested-plot survey was employed [@muller-dumbois_1974] where the number of weed species was counted in a plot of 1 m^2^ surface and the sampling area was progressively doubled in size. At each step, the number of new weed species was counted. The dataset is taken from @cristaudo_2015.
+
+1. Area (numeric): sampled area (in square meters)
+2. numSpecies (numeric): count of the number of species
+
+## `crosses` {#crosses .unnumbered}
+
+An experiment to compare nine maize hybrids, obtained from three pollinating inbred lines (A1, A2, and A3), each one crossed with three different female inbred lines (A1 was crossed with B1, B2, and B3, A2 was crossed with B4, B5, and B6, while A3 was crossed B7, B8, and B9). The experiment was laid out as complete blocks with four replicates (36 subjects in total). The dataset was generated through Monte Carlo simulation.
+
+1. Male (character): pollinating line
+2. Female (character): female line
+3. Block (numeric): code for the blocks
+4. Yield (numeric): maize yield (in tons per hectare)
+
+## `fabaBeanSplitMet` {#fabaBeanSplitMet .unnumbered}
+
+Six faba bean genotypes were tested at two sowing times using a split-plot design in four complete blocks. Sowing times were randomized to main-plots within blocks, and genotypes were randomized to sub-plots within main-plots and blocks. The experiment was repeated in three years and two locations of Central Italy. The dataset was taken from @stagnari_2007.
+
+1. Location (character): name of the location
+2. Season (numeric): year of harvest
+3. Sowing (character): sowing time
+4. Genotype (character): name of the genotype
+5. Block (numeric): code for the block in each experiment
+6. Yield (numeric): crop grain yield in tons per hectare
+
+
+## `failureTimes` {#failuretimes .unnumbered}
+
+An experiment to record the failure time of heating systems as affected by four different operating temperatures. The design was completely randomized with six replicates, and the number of hours before failure was measured. The dataset is taken from @nelson_72.
+
+1. Temp (numeric): testing temperature (in $^{\circ}$F)
+2. Hours_to_failure (numeric): number of hours before failure
+
+## `FertilizationTiming` {#fertilizationtiming .unnumbered}
+
+A field experiment to evaluate the effect of fertilization timing (early, optimal, late) on two genotypes (A and B). The experiment was laid out as an RCBD, and the response represents the amount of absorbed nitrogen by the plant (simulated data).
+
+1. Timing (character): timing of fertilization (early, optimal, late)
+2. Genotype (character): genotype
+3. Block (numeric): code for the block
+4. Nabs (numeric): amount of absorbed nitrogen
+
+## `FGP_rape` {#fgp_rape .unnumbered}
+
+An experiment where the germination of three genotypes of oilseed rape was assessed in controlled conditions, at 20 $^{\circ}$C, according to an RCBD with six replicates. One replicate per genotype, consisting of a Petri dish with 50 seeds, was put in each of six shelves inside the oven. The number of germinated seeds was counted 15 days after the start of the assay and expressed as the Final Proportion of Germinated seeds (FGP). The assay was repeated twice in different and independent ovens with the same experimental design. The dataset is taken from @pace_2012.
+
+1. Dish (numeric): code for the Petri dish
+2. Run (numeric coding): code for the run
+3. Shelf (numeric): code for the shelf
+4. Species (character): plant species
+5. Genotype (character): genotype
+6. FGP (numeric): Final Germinated Proportion in each dish
+
+## `floristicData1` {#floristicData1 .unnumbered}
+
+An experiment where the weed flora composed by 8 weed species was recorded in 120 plots, included in a three-factor factorial experiment in a randomised blocks design. The counts of weeds are reported and the dataset was modified from @scavo_2020.
+
+1. F1 to F3 (character): the three experimental factors, respectively with 5, 2 and 3 levels
+2. Rep (character): the blocks 
+3. SP1 to SP8 (numeric): the counts for the eight weed species
+
+## `heights` {#heights .unnumbered}
+
+Highly unbalanced dataset, containing the height (cm) and yield (t/ha) of 20 maize plants belonging to 4 different genotypes. The dataset was generated through Monte Carlo simulation.
+
+1. Id (numeric): code for the plot
+2. var (character): code for the genotype
+3. height (numeric): crop height (cm)
+4. yield (numeric): crop yield (t/ha)
+
+## `Hordeum_GR` {#Hordeum_GR .unnumbered}
+
+The germination rates of *Hordeum spontaneum* were studied, as affected by the environmental temperatures. This data was derived by germination assays at different temperatures, by using the dataset in @mesgaran_2017, with some slight modifications of the technique described in that manuscript.
+
+1. Temp (numeric): Environmental temperature (in °C)
+2. T50 (numeric): Median time to germination for the seed lot under study (in hours)
+3. GR50 (numeric): Median germination rate (as hours^-1^)
+
+## `insects` {#insects .unnumbered}
+
+An experiment in which tobacco plants were treated with three different insecticides was conducted using a completely randomized design with five replicates (resulting in a total of fifteen plants). The number of insects over the surface of leaves in each plant was counted three weeks after the treatments.
+
+1. Insecticide (character): code for the insecticide
+2. Rep (numeric): code for the replicate (not blocks)
+3. Count (numeric). count of insects
+
+## `johnsongrass` {#johnsongrass .unnumbered}
+
+A pot experiment to evaluate the best timing for herbicide application against *Sorghum halepense* originated by rhizomes. Five timings were compared including a split treatment (2-3, 4-5, 6-7, 8-9, and 3-4/8-9 leaves), and an untreated check was added for comparison. Treatments were repeated on plants originating from rhizomes of different lengths (2, 4, and 6 nodes). The design was a fully crossed two-way factorial, laid out as completely randomized with four replicates. The dataset is taken from @onofri_1994b.
+
+1. Length (character): length of rhizomes at the beginning of the experiment
+2. Timing (character): crop stage at spraying
+3. RizomeWeight (numeric): weight of rhizomes four weeks after spraying (in grams per pot)
+
+## `LeClerg` {#leclerg .unnumbered}
+
+A genotype experiment in a completely randomized design, with five genotypes and four replicates. The dataset is modified from [@leclerg_1962].
+
+1. Variety (character): code for the genotype
+2. Yield (numeric): crop yield in bushels per acre
+
+## `LepidopteraEggs` {#lepidopteraeggs .unnumbered}
+
+An entomologist counted the number of eggs laid by a species of moth, on three different substrates using a completely randomized design with 15 replicates. This dataset was modified from @kuehl_2000.
+
+1. Substrate (character): code for the substrate
+2. No_of_eggs (numeric): count of the number of eggs
+
+## `lettuceLS` {#lettucels .unnumbered}
+
+An experiment to assess the effect of four different fertilizers on lettuce yield. The experiment was laid out as a Latin square with four replicates. The dataset was generated through Monte Carlo simulation.
+
+1. Fertilizer (character): code for the fertilizer
+2. Row (numeric): code for the row in the Latin square grid
+3. Column (numeric): code for the column in the Latin square grid
+4. Yield (numeric): lettuce yield (in kg per hectare $\times$ 100)
+
+## `maizeMET` {#maizeMET .unnumbered}
+
+A multi-environment experiment in mazie, with four genotypes and 14 environments. The data represent the average yields for each genotype in each environment. This dataset is presented in @piepho_1998 and it can be used to reproduce the analyses presented there.
+
+1. Env (numeric coding): code for the environment
+2. Gen (character): code for the genotype
+3. Yield (numeric): maize yield in tons per hectar
+
+## `metamitron` {#metamitron .unnumbered}
+
+An experiment to study the degradation of the herbicide metamitron (M) in soil, either alone or in the presence of two co-applied herbicides, i.e. phenmedipham (P) and chloridazon (C). Ninety-six independent soil samples were treated with four herbicide combinations (i.e., M, M+P, M+C, and M+P+C, 32 samples per combination) and stored in a climatic chamber at 20$^{\circ}$C. Three random soil samples were collected for each herbicide combination at eight different time points (0, 7, 14, 21, 32, 42, 55 and 67 days after treatment). Theu were stored in a refrigerator until chemical analyses. At the end of the experiment, all soil samples were analyzed to determine the residual concentration of metamitron. This dataset is taken from @vischetti_1996, and it has been modified through Monte Carlo simulation, to make it more suitable for teaching purposes.
+
+1. Time (numeric): the time at sampling (in Days after the treatment)
+2. Herbicide (character): code for the herbicide combination
+3. Rep (numeric): code for the replicate (not blocks; the experiment was fully randomized)
+4. Conc (numeric): the concentration of metamitron in % of the initial value
+
+## `missingVal` {#missingval .unnumbered}
+
+A fertilization trial was conducted according to a randomized complete block design with five replicates; however, due to unforeseen circumstances, one value is missing for the '50N' treatment in the second block.
+
+1. Fert (character): fertilization treatment
+2. Block (numeric): code for the block
+3. P2O5 (numeric): content of P~2~O~5~ in leaves (%)
+
+## `mixture` {#mixture .unnumbered}
+
+A pot experiment to compare weed control efficacy of two herbicides used alone and in a mixture. A control was also added as a reference, and thus, the four treatments were (i) Metribuzin, (ii) Rimsulfuron, (iii) Metribuzin + rimsulfuron, and (iv) the untreated control. Sixteen uniform pots were prepared and sown with *Solanum nigrum*. When the plants reached the 4-true-leaf stage, the pots were sprayed with the above herbicide solution following a completely randomized design with four replicates. Three weeks after the treatment, the plants in each pot were harvested and weighed: the lower the weight, the higher the efficacy of herbicides. The dataset is taken from [@onofri_1995].
+
+1. Treat (character): herbicide treatment
+2. Weight (numeric): dry weight of weed plants (grams per pot)
+
+## `NGenotype` and `NGenotypeFull` {#ngenotype-and-ngenotypefull .unnumbered}
+
+Fifteen genotypes of durum wheat were compared under two different N fertilization strategies (in the dataset 'NGenotype' the number of genotypes has been reduced to 5). The dataset was generated through Monte Carlo simulation that started from the original data in @stagnari_2013.
+
+1. Block (numeric): code for the block
+2. Genotype (character): code for the genotype
+3. Nitrogen (numeric): code for the fertilization strategy
+4. Yield (numeric): wheat yield in tons per hectare
+
+## `NWheat` {#nwheat .unnumbered}
+
+A N fertilization experiment was conducted in wheat using a randomized complete block design, with four N doses and four replicates. The dataset was generated through Monte Carlo simulation.
+
+1. Dose (numeric): N fertilization rate (Kg/ha)
+2. Block (numeric): code for the block
+3. Yield (numeric): crop yield in tons per hectare
+
+## `Oat1L` {#oat1l .unnumbered}
+
+A field experiment was laid out as a CRD with three replicates to compare five genotypes of oat in one location. The data was generated through Monte Carlo simulation.
+
+1. Genotype (character): code for the genotype
+2. Yield (numeric): oat yield in tons per hectare
+
+## `Oat2L` {#oat2l .unnumbered}
+
+The same experiment as for 'Oat1L' was repeated in a second location, also with a completely randomized layout. Also the data for the second location were generated through Monte Carlo simulation.
+
+1. Location (character): code for the location
+2. Genotype (character): code for the genotype
+3. Yield (numeric): oat yield in tons per hectare
+
+## `orangeIrrigation` {#orangeirrigation .unnumbered}
+
+An irrigation experiment was conducted in an orange grove in Southern Italy, comprising five irrigation systems in five complete blocks. The dataset was simulated by Monte Carlo methods.
+
+1. Method (character): irrigation systems
+2. Block (numeric): code for the block
+3. Yield (numeric): orange yield in tons per hectare
+
+## `pea_MultiLoc` {#pea_multiloc .unnumbered}
+
+A multi-location genotype experiment in field pea, to compare 17 genotypes in 12 locations. In each location, the experiment was laid out as an RCBD, with four blocks. The dataset was generated through Monte Carlo simulation, starting from the data in @monotti_2009.
+
+1. Id (numeric): code for the plot
+2. Loc (character): code for the location
+3. Var (character): code for the genotype
+4. Block (character): code for the block
+5. Yield (numeric): pea yield in tons per hectare
+
+## `Rainfall2022` {#rainfall2022 .unnumbered}
+
+Daily rainfall amounts (mm) in central Italy in 2022 from a local meteorological station.
+
+1. DOY (numeric): Day Of the Year
+2. PRP (numeric): amount of daily rainfall (mm per day)
+
+## `recropS` {#recrops .unnumbered}
+
+Rimsulfuron was applied at the recommended rate on bare soil, and untreated plots were included for comparison. Forty days after the treatment, sugarbeet, rape and soybean were sown on treated and untreated plots, and the weight of the plants was determined four weeks after sowing. The experiment was laid down as a strip-plot in complete blocks: in each block, the herbicide treatments (rimsulfuron and the untreated control) were randomly allocated to each of two columns, while the three crops were randomly allocated to each of three rows (Onofri, unpublished data).
+
+1. Herbicide (Character): name of the herbicide treatment
+2. Crop (character): name of the crop
+3. Block (numeric): code for the block
+4. CropBiomass (numeric): weight of crop biomass four weeks after sowing
+
+## `rimsulfuron` {#rimsulfuron .unnumbered}
+
+A herbicide experiment where rimsulfuron was used with different timings and in different mixtures and compared to several other herbicide solutions for weed control in maize. At the end of the crop cycle, herbicide efficacy was assessed by measuring the coverage of weeds (%) and the yield of maize (in 100 kg per hectare).
+
+1. Herbicide (character): name of the herbicide treatment
+2. Plot (numeric): code for the plot
+3. Code (numeric): code for the herbicide
+4. Block (numeric): code for the block
+5. Column (numeric): code for the column within each block
+6. WeedCover (numeric): coverage of weeds (in %)
+7. Yield (numeric): maize yield (in 100 kg per hectare)
+
+## `sadocchi_man` {#sadocchi_man .unnumbered}
+
+Exemplary and simple dataset for multivariate analyses, such as MANOVA. It refers to a completely randomised, two-factor factorial experiment, with two numeric responses. The dataset was taken from @sadocchi_1987.
+
+1. a (numerical coding): levels for the experimental factor 'a'
+2. b (numerical coding): levels for the experimental factor 'b'
+3. y1 (numeric): 1st quantitative response variable
+4. y2 (numeric): 2nd quantitative response variable
+
+## `seedBank` {#seedBank .unnumbered}
+
+Six rotations were compared in two agricultural systems (BIO and LOW) on a complete block design with three replicates. After six years, 10 soil cores were taken from each sub-plot and soil seed bank was counted. Dataset was taken from @graziani_2012 and it was modified to meet teaching purposes.
+
+1. Sample (numeric): cod for each soil core
+2. Block (numerical coding): code for the block
+3. Plot (numerical coding): code for plots
+4. Treatment (numerical coding): code for treatment levels (12 combinations)
+5. System (character): the systems under comparison
+6. Rotation (character): the rotations under comparison
+7. noSeeds (numeric): counts of weed seed in each soil core
+
+## `Sinapis` {#sinapis .unnumbered}
+
+A study was conducted to evaluate the effect of increasing densities of a weed (*Sinapis arvensis*) on sunflower yield (tons per hectare). The dataset was taken from @onofri_1994.
+
+1. density (numeric): weed density in plants per square meter
+2. block (numeric): code for the block
+3. yield (numeric): sunflower grain yield in tons per hectare
+
+## `SOLNI_hormesis` {#SOLNI_hormesis .unnumbered}
+
+A pot-bioassay study was conducted to evaluate the efficacy of rimsulfuron against *Solanum nigrum* at the 4-leaf stage. The effect was assessed by weighing the plants in each pot 21 days after the treatment; the response curve shows clear signs of stimulation at low herbicide doses (hormesis). The dataset was taken from @onofri_1995.
+
+1. Dose (numeric): rimsulfuron dose (g/ha)
+2. block (numeric): weight of treated plants (grams per pot)
+
+## `SowingTime` {#sowingtime .unnumbered}
+
+Six faba bean genotypes were tested at two sowing times using a split-plot design in four complete blocks. Sowing times were randomized to main-plots within blocks, and genotypes were randomized to sub-plots within main-plots and blocks. The dataset was taken from @stagnari_2007.
+
+1. Plot (numeric): code for the plot
+2. SowingTime (character): sowing season
+3. Genotype (character): name of the genotype
+4. Block (numeric): code for the block
+5. Yield (numeric): crop grain yield in tons per hectare
+
+## `starchGrain_g` {#StarchGrain_g .unnumbered}
+
+This dataset refers to an experiment which aimed to compare the diameters of starch grains from tubers of two potato producers. Starch grains were sampled from tubers collected from the production fields of the producers. The dataset shows the counts of starch grains assigned to one of five diameter classes (<4, [4−8[, [8−12[, [12−16[,≥16 $\mu m$). For each producer, the diameters were measured from twelve photos taken with a microscope. The original dataset is in a grouped form and one record represents a photo (12 photos per each producer). The dataset was taken from @onofri_2019
+
+1. Group (character): the producer
+2. Photo (numeric): code for each photo
+3. c1-c5 (numeric): the counts of individual in each class
+
+## `starchGrain_u` {#StarchGrain_u .unnumbered}
+
+Same dataset as 'StarchGrain_g', but in ungrouped form (one row for each starch grain).
+
+1. Photo (numeric): code for each photo
+2. Group (character): the producer
+3. Class (character): the diameter class to which each grain belongs (c1 to c5)
+
+## `starchGrain_s` {#StarchGrain_s .unnumbered}
+
+Same dataset as 'StarchGrain_g', but in censored 'long' form (one row for each starch grain), where the class is represented by using the lower and upper diameter values whithin which the real diameter value is comprised.
+
+1. Photo (numeric): code for each photo
+2. Group (character): the producer
+3. sizeLow (numeric): the lower limit for the diameter class
+4. sizeUp (numeric): the upper limit for the diameter class
+5. Class (character): the diameter class to which each grain belongs (c1 to c5)
+
+## `sugarsMedia` {#sugarsmedia .unnumbered}
+
+Plant tissues of tomato were grown in tissue cultures using three types of media, each based on the addition of a specific amount of either glucose, fructose, or sucrose to the control. The experiment was conducted using a completely randomized design with five replicates, and the growth of cells was recorded for each subject. The dataset was generated through Monte Carlo simulation, starting from the original data in @kuehl_2000.
+
+1. Sugar (character): type of substrate
+2. Growth (numeric): tissue growth in mm
+
+## `Sunflower` {#Sunflower .unnumbered}
+
+Water extracts of two sunflower varieties were compared in terms of phytotoxicity to the same test-plant (*Sinapis alba*). Several lots of 50 seeds of *S. alba* were put in Petri dishes and moistened with water extracts at increasing concentrations (three replicated Petri dishes for each of four concentration levels, including the untreated control). Radicle lengths were determined seven days after the treatment. The experiment was planned with a CRD. Data are taken from @pannacci_2010.
+
+1. Dose (numeric): concentration of extracts (g d.m. in 100 mL of water)
+2. Rep (numeric): code for the replicate
+3. Var (character): name of sunflower varieties
+4. Length (numeric): root lengths in mm
+
+## `Timings_77490` {#timings_77490 .unnumbered}
+
+A field experiment with maize in which rimsulfuron was used post-emergence in maize at 4 different timings and compared to the untreated unweeded control. The aim was to assess the selectivity of the herbicide for the crop, depending on the moment of intervention. One value is missing due to an unforeseen event. The dataset is taken from Onofri (unpublished data).
+
+1. Plot (numeric): code for the plot
+2. Timing (character): timing of weed control as the number of maize leaves
+3. Block (numeric): code for the the block
+4. Height_30 (numeric): height of maize (cm) on 30 June (cm)
+5. Weight_30 (numeric): average weight of maize plants (g per plant) on 30 June
+6. FinalYield (numeric): grain yield of maize in kg/ha $\times$ 100
+
+## `TKW` {#tkw .unnumbered}
+
+An experiment with 30 genotypes in three blocks, where the Weight of Thousand Kernels (TKW) was recorded in three sub-samples per plot (Ciriciofolo, unpublished data)
+
+1. Plot (numeric): code for the plot
+2. Block (numeric): code for the block
+3. Genotype (character): name of the genotype
+4. Sample (numeric): code for the subsample in each plot
+5. TKW (numeric): weight of 1000 wheat kernels (g)
+
+## `Tripleuspermum` {#tripleuspermum .unnumbered}
+
+Plants of *Tripleuspermum inodorum* were treated with a sulphonylurea herbicide (tribenuron-methyl) at increasing doses, and the fresh weight of the treated plants per pot was recorded 3 weeks after treatment. The experiment was completely randomized with three replicates and conducted at the Department of Integrated Pest Management, University of Aarhus, Denmark [@pannacci_2013].
+
+1. Dose (numeric): Dose of tribenuron-methyl (in g/ha)
+2. FreshWeight (numeric): weight of plants 3 weeks after the treatment (in grams per pot)
+
+## `waterProductivity` {#waterProductivity .unnumbered}
+
+Water productivity was studied by @toscano_2026 in lattuce, as affected by deficit irrigation. A pot experiment was performed in Sicily (Messina, Southern Italy), considering four irrigation volumes (100%, 75%, 50% and 25% of contained water capacity) on an experiment with four replicates. Water productivity was calculated for each plot as the ratio between above ground fresh biomass (g plant^-1^) and the cumulative net water input (L plant^-1^). The dataset was generated through Monte Carlo simulation, that started from the original data in Toscano et al (2026) and considered  a completely randomised design, for the sake of simplicity.
+
+1. Regime (numeric): irrigation volume (in % of contained water capacity)
+2. WP (numeric): water productivity as the ratio between above ground fresh biomass (g plant^-1^) and the cumulative net water input (L plant^-1^) 
+
+## `WeedCounts` {#weedcounts .unnumbered}
+
+Counts of three weed species (CHEAL: *Chenopodium album*, CHEHY: *C. hybridum*, and CHEPO: *C. polyspermum*) in twenty random quadrats in a field of central Italy (Onofri, unpublished data).
+
+1. Species (character): the weed species, identified by its Bayer code
+2. Rep (numeric): code for the quadrat
+3. Count (numeric): count of the number of plants per quadrat
+
+## `WeedCountTrial` {#weedcountstrial .unnumbered}
+
+Counts of weeds (ECHCG: *Echinochloa crus-galli*, AMARE: *Amaranthus retroflexus*, CHEAL: *Chenopodium album*, OTHER: other weed species) in an herbicide trial performed in central Italy, to compare 13 herbicides for weed control in maize, the untreated and hand-weeded controls (Onofri, unpublished data). Counts are expressed as number of weeds per square meters
+
+1. Plot (numeric): coding for the field plots
+2. Herbicide (character): code for the herbicide used or type of control
+3. Block (numeric): code for the block in the RCBD
+4. Columns from 4 to 7 (numeric): counts of the number of plants per square meter
+
+## `WeedCover` {#weedcover .unnumbered}
+
+Results of a survey, where the yield of maize was determined, as affected by the early determined covering of weeds. The dataset was simulated by Monte Carlo methods.
+
+1. WeedCover (numeric): ground covering of weeds (%)
+2. Yield (numeric): yield of maize in tons per hectare
+
+## `WeedMortality` {#weedmortality .unnumbered}
+
+Counts of dead weeds out of 50, in 24 pots, treated with 6 herbicides and four replicates per herbicide.
+
+1. Herbicide (character): code for the herbicide sprayed in each pot
+2. noWeeds (numeric): initial count of weed plants
+3. obsDead (numeric): count of dead plants per each pot
+4. Mortality (numeric): Percentage of dead plants
+
+## `WinterWheat` and `WinterWheat2002` {#winterwheat-and-winterwheat2002 .unnumbered}
+
+A multi-year experiment was conducted to compare eight winter wheat genotypes, with an RCBD with three replicates in the hills of central Italy and repeated for seven years [@onofri_2007]. The dataset 'WinterWheat2022' only contains the data from the 2002 season.
+
+1. Plot (numeric): code for the plot
+2. Block (numeric): code for the block within each year
+3. Genotype (character): name of the genotypes
+4. Yield (numeric): grain yield in tons per hectare
+5. Year (numeric): the year in which the yield was measured
+
+## References
+::: {#refs}
+:::
+

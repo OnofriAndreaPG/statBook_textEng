@@ -1,0 +1,3 @@
+# Extending regression models
+
+No other case-studies, yet
