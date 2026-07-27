@@ -487,7 +487,4 @@ A multi-year experiment was conducted to compare eight winter wheat genotypes, w
 4. Yield (numeric): grain yield in tons per hectare
 5. Year (numeric): the year in which the yield was measured
 
-## References
-::: {#refs}
-:::
 

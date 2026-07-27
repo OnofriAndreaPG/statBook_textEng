@@ -21,6 +21,7 @@ book:
     - 11-ExtendingRegression.qmd
     - 12-IntroMixed.qmd
     - 13-Appendices1.qmd
+    - References.qmd
 
 bibliography: statBook.bib
 csl: _weed-research.csl

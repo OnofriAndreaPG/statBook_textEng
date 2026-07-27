@@ -27,7 +27,3 @@ This book and website owe much to the countless questions, confusions, and conce
 
 Last but not least, I am deeply indebted to the R Core development team for the availability of the R language and environment, as well as for their efforts to maintain and preserve its freeware nature. I also want to mention that this book and its associated website are written in \texttt{RMarkdown}, using the \texttt{bookdown} and \texttt{blogdown} packages, which are three valuable additions to the R project, for which I am very much indebted.
 
-## References
-::: {#refs}
-:::
-
