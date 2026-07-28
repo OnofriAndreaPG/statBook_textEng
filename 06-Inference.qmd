@@ -1,3 +1,5 @@
 # Statistical Inference
 
-Nothing to add, yet
+## List of *errata*
+
+1. At page 101, in Code box 6.1, we are reconsidering Example 5.3, not 5.2
