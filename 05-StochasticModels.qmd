@@ -1,3 +1,7 @@
 # Stochastic models
 
-Nothing to add, yet
+## Example 5.2. Erratum
+
+I just found a type on the first sentence at Page 93. The correct sentence is the following one.
+
+*Assuming that the cause-effect relationship is reliable, the expected concentration at 20 days after the treatment should be 4.22 ng g^−1^. (Code Box 5.5). However, the observed result depends on the experimental error, which is a random, unpredictable event; if we assume that the probability function for the observed concentration is Gaussian, with a mean of 4.22 and a standard deviation of 0.422 (i.e., 4.22 $\times$ 10%), the probability of obtaining a measure of 3 ng g^−1^. or lower is less than 0.2%, which is a relatively unlikely event.*
