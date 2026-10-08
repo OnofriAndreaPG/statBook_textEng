@@ -1,3 +1,5 @@
 # Checking fitted models
 
-Nothing to add, yet
+## List of *errata*
+
+1. At page 136, an example of the Levene's test is given in Code Box 8.1, not 8.3
