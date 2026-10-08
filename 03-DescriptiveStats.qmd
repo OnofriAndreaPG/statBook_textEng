@@ -35,10 +35,12 @@ If we consider a variable where the classes can be logically ordered, we can als
 cumsum(table(mtcars$gear))
 ```
 
+## Binning/Bucketing
 
 In some circumstances, it may be convenient to 'bin' a continuous variable into a set of intervals. For example, if we have recorded the ages of a big group of people, we can divide the scale into intervals of five years (e.g., from 10 to 15, from 15 to 20 and so on) and, eventually, assign each individual to the appropriate age class. Such a technique is called **binning** or **bucketing**.
 
 As an example, we can consider the 'co2' dataset, that is included in the base R installation. It contains 468 values of CO_2_ atmospheric concentrations, expressed in parts per million, as observed at monthly intervals in the US. With such a big dataset, the mean and standard deviation are not sufficient to get a good feel for the data and it would be important to have an idea of the shape of the dataset. Therefore we can split the continuous scale into a series of intervals, from 310 ppm to 370 ppm, with breaks every 10 ppm and count the observations in each interval. In the box below, the function `cut()` assigns each value to the corresponding interval (please note the 'breaks' argument, which sets the margins of each interval. Intervals are, by default, left open and right-closed), while the function `table()` calculates the frequencies.
+
 
 ```{r}
 data(co2)
@@ -54,9 +56,9 @@ freq
 ```
 
 
-### Descriptive stats for distributions of frequencies
+## Descriptive stats for distributions of frequencies
 
-For categorical data, we can retrieve the **mode**, which is the class with the highest frequency. For ordinal data, wherever distances between classes are meaningful, and for discrete data, we can also calculate the median and other percentiles, as well as the mean and other statistics of spread (e.g., variance, standard deviation). The mean is calculated as:
+For nominal data, we can retrieve the **mode**, which is the class with the highest frequency. For ordinal data, wherever distances between classes are meaningful, and for discrete data, we can also calculate the median and other percentiles, as well as the mean and other statistics of spread (e.g., variance, standard deviation). The mean is calculated as:
 
 $$\mu = \frac{\sum\limits_{i = 1}^n f_i x_i}{\sum\limits_{i = 1}^n f_i}$$
 
@@ -88,7 +90,7 @@ knitr::kable(tab, caption = "Distribution of frequency for the time (in minutes)
 
 The calculation of the deviance is left as an exercise.
 
-### Graphical representations
+## Graphical representations of nominal data
 
 A distribution of frequency can be represented by using a 'pie' chart, which can be drawn with `ggplot`. The coding conist of producing a bar chart with stacked segments and rotating the coordinate system, as shown in the box below.
 
@@ -105,7 +107,7 @@ ggplot(data = dfr) +
 ```
 
 
-### Contingency tables
+## Contingency tables
 
 When we have more than one cataegorical variable, we can summarise the distribution of frequency by using two-way tables, usually known as **contingency tables**  or crosstabs. These tables can be created by providing two or more vectors as arguments to the `table()` function; it is important to keep in mind that, even if the resulting table may resamble a matrix or a data.frame, a contingency table represents a peculiar class in R, with several specific methods, that we will explore later. The box below shows a contingency table that shows the cross tabulation for 'gear' and 'vs' in 'mtcars'.
 
@@ -120,14 +122,14 @@ Another interesting table is contained in the 'datasets' package and is named  '
 data(HairEyeColor)
 tab <- HairEyeColor[,,2]
 tab <- matrix(as.numeric(tab), 4, 4)
-tab <- cbind(tab, apply(tab, 1, sum))
-tab <- rbind(tab, apply(tab, 2, sum))
+# tab <- cbind(tab, apply(tab, 1, sum))
+# tab <- rbind(tab, apply(tab, 2, sum))
 
-rn <- c("Black hair", "Brown hair", "Red hair", "Blond hair", "COLUMN SUMS")
-cn <- c("Brown eye", "Blue eye", "Hazel eye", "Green eye", "ROW SUMS")
+rn <- c("Black hair", "Brown hair", "Red hair", "Blond hair")
+cn <- c("Brown eye", "Blue eye", "Hazel eye", "Green eye")
 row.names(tab) <- rn
 colnames(tab) <- cn
-knitr::kable(tab, align = "ccccc", caption = "Distribution of hair and eye color for 313 female statistics students, augmented with row and column sums. Dataset taken from R package 'datasets'", booktabs = T)
+knitr::kable(tab, align = "cccc", caption = "Distribution of hair and eye color for 313 female statistics students, augmented with row and column sums. Dataset taken from R package 'datasets'", booktabs = T)
 ```
 
 
@@ -135,7 +137,23 @@ knitr::kable(tab, align = "ccccc", caption = "Distribution of hair and eye color
 
 With a contingency table, we may be interested in assessing whether the two variables show some sort of dependency relationship. In the previous example, is there any relationship between the color of the eyes and the color of the hair? If not, we say that the two variables are independent. Independency is assessed by using the $\chi^2$ statistic.
 
-As the first step, we need to calculate the *marginal frequencies*, i.e. the sums of frequencies by row and by column (please note that the entries of a contingency table are called *joint frequencies*). These sums are reported in the Table above.
+In order to make hand calculations easier, let's restrict our attention to people with Balck/Blond hair and Brown/Blue eyes. The result contingency table is reported below and clearly shows that the vast majority of people with black hair have brown eyes, while the vast majority of people with blond hair have blue eyes. It would apper that there is a strong association between the color of hair and the color of eyes.
+
+```{r echo=FALSE}
+data(HairEyeColor)
+tab <- HairEyeColor[c(1,4),c(1,2),2]
+tab <- matrix(as.numeric(tab), 2, 2)
+tab <- cbind(tab, apply(tab, 1, sum))
+tab <- rbind(tab, apply(tab, 2, sum))
+
+rn <- c("Black hair", "Blond hair", "COLUMN SUMS")
+cn <- c("Brown eye", "Blue eye", "ROW SUMS")
+row.names(tab) <- rn
+colnames(tab) <- cn
+knitr::kable(tab, align = "ccc", caption = "Excerpt from the previous table, considering (for the sake of simplicity) only two color classes for both hair and eyes", booktabs = T)
+```
+
+In order to elucidate such an association, we can, as the first step calculate the *marginal frequencies*, i.e. the sums of frequencies by row and by column (please note that the entries of a contingency table are called *joint frequencies*). These sums are reported in the Table above.
 
 ```{r eval=FALSE, include=FALSE}
 # rowSum <- apply(tab, 1, sum)
@@ -151,7 +169,8 @@ As the first step, we need to calculate the *marginal frequencies*, i.e. the sum
 # summary(tab)
 ```
 
-Let's consider black hair: in total there are 52 women with black air, that is $52/313 \times 100 = 16.6$% of the total. If the two characters were independent, the above proportion should not change, depending on the color of eyes. For example, we have 122 women with brown eyes and 16.6% of those should be black haired, which makes up an expected value of 20.26837 black haired and brown eyed women (much lower than the observed 36). Another example: the expected value of blue eyed and black haired women is $114 \times 0.166 = 18.9$ (much higher than the observed). A third example may be useful: in total, there is $143/313 = 45.7$% of brown haired women and, in case of independence, we would expect $46 \times 0.457 =  21.02$ brown haired and hazel eyed woman. Keeping on with the calculations, we could derive a table of expected frequency, in the case of complete independence between the two characters. All the expected values in case of independency are reported in the Table below.
+In total, there are 45 individuals
+with black air, that is $52/313 \times 100 = 16.6$% of the total. If the two characters were independent, the above proportion should not change, depending on the color of eyes. For example, we have 122 women with brown eyes and 16.6% of those should be black haired, which makes up an expected value of 20.26837 black haired and brown eyed women (much lower than the observed 36). Another example: the expected value of blue eyed and black haired women is $114 \times 0.166 = 18.9$ (much higher than the observed). A third example may be useful: in total, there is $143/313 = 45.7$% of brown haired women and, in case of independence, we would expect $46 \times 0.457 =  21.02$ brown haired and hazel eyed woman. Keeping on with the calculations, we could derive a table of expected frequency, in the case of complete independence between the two characters. All the expected values in case of independency are reported in the Table below.
 
 ```{r echo=FALSE}
 Black <- c(20.26837, 18.93930,  7.642173,  5.150160)
@@ -194,7 +213,7 @@ Vcram
 ```
 
 
-### Questions and exercises
+## Questions and exercises
 
 1. List and discuss the main statistics for nominal and ordinal variables
 2. Describe and discuss briefly the chi square coefficient

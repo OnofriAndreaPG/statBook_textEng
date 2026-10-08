@@ -1,3 +1,8 @@
 # Cause-effect Relationships
 
-Nothing to add, yet
+## Assessing the 'goodness of fit' for regression models
+
+1. Coefficient of determination
+2. AIC/BIC values
+
+To be developed, yet
