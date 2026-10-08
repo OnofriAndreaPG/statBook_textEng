@@ -92,7 +92,7 @@ The calculation of the deviance is left as an exercise.
 
 ## Graphical representations of nominal data
 
-A distribution of frequency can be represented by using a 'pie' chart, which can be drawn with `ggplot`. The coding conist of producing a bar chart with stacked segments and rotating the coordinate system, as shown in the box below.
+A distribution of frequency can be represented by using a barplot, as described in the main book. It can also be represented by using a 'pie' chart, drawn with `ggplot`. The coding consists of producing a bar chart with stacked segments and rotating the coordinate system, as shown in the box below.
 
 
 ```{r}
@@ -137,7 +137,7 @@ knitr::kable(tab, align = "cccc", caption = "Distribution of hair and eye color 
 
 With a contingency table, we may be interested in assessing whether the two variables show some sort of dependency relationship. In the previous example, is there any relationship between the color of the eyes and the color of the hair? If not, we say that the two variables are independent. Independency is assessed by using the $\chi^2$ statistic.
 
-In order to make hand calculations easier, let's restrict our attention to people with Balck/Blond hair and Brown/Blue eyes. The result contingency table is reported below and clearly shows that the vast majority of people with black hair have brown eyes, while the vast majority of people with blond hair have blue eyes. It would apper that there is a strong association between the color of hair and the color of eyes.
+In order to make hand calculations easier, let's restrict our attention to people with Black/Blond hair and Brown/Blue eyes. This 'restricted' contingency table is reported below and clearly shows that the vast majority of people with black hair have brown eyes, while the vast majority of people with blond hair have blue eyes. It would apper that there is a strong association between the color of hair and the color of eyes.
 
 ```{r echo=FALSE}
 data(HairEyeColor)
@@ -169,17 +169,13 @@ In order to elucidate such an association, we can, as the first step calculate t
 # summary(tab)
 ```
 
-In total, there are 45 individuals
-with black air, that is $52/313 \times 100 = 16.6$% of the total. If the two characters were independent, the above proportion should not change, depending on the color of eyes. For example, we have 122 women with brown eyes and 16.6% of those should be black haired, which makes up an expected value of 20.26837 black haired and brown eyed women (much lower than the observed 36). Another example: the expected value of blue eyed and black haired women is $114 \times 0.166 = 18.9$ (much higher than the observed). A third example may be useful: in total, there is $143/313 = 45.7$% of brown haired women and, in case of independence, we would expect $46 \times 0.457 =  21.02$ brown haired and hazel eyed woman. Keeping on with the calculations, we could derive a table of expected frequency, in the case of complete independence between the two characters. All the expected values in case of independency are reported in the Table below.
+In total, we have 45 individuals with black hair, that is 45/113 × 100 = 39.8% of the whole sample, while we have 68/113×100 = 60.2% of individuals with blond hair. If the two characters were really independent, the above percentages should not change, depending on the color of eyes; consequently, in the brown eyes group, the number of individuals with black hair should be 15.93 (i.e., 39.8% of 40), while the number of individuals with blonde hair should be 24.08 (i.e. 60.2% of 40). From there, we could derive a full table of expected frequencies, assuming complete independence between the two characters (see below).
 
 ```{r echo=FALSE}
-Black <- c(20.26837, 18.93930,  7.642173,  5.150160)
-Brown <- c(55.73802, 52.08307, 21.015974, 14.162939)
-Red   <- c(14.42173, 13.47604,  5.437700,  3.664537)
-Blond <- c(31.57189, 29.50160, 11.904153,  8.022364)
-tabExp <- rbind(Black, Brown, Red, Blond)
-tab[1:4, 1:4] <- tabExp
-knitr::kable(tab, align = "ccccc", caption = "Expected values of hair and eye color for 313 female statistics students, augmented with row and column sums. Expectations assume total lack of dependency between the two variables.", booktabs = T)
+tab <- matrix(c(15.93, 29.07, 24.07, 43.93), 2, 2, byrow = TRUE)
+row.names(tab) <- c("Black", "Blonde")
+colnames(tab) <- c("Brown", "Blue")
+knitr::kable(tab, align = "ccccc", caption = "Expected counts of hair and eye color, assuming total lack of dependency between the two characters.", booktabs = T)
 ```
 
 
@@ -187,25 +183,23 @@ The observed and expected values are different, which might indicate a some sort
 
 $$\chi ^2  = \sum \left[ \frac{\left( {f_o  - f_e } \right)^2 }{f_e } \right]$$
 
-where $f_o$ are the observed frequencies and $f_e$ are the expected frequencies. For example, for the first value we have:
+where $f_o$ are the observed frequencies and $f_e$ are the expected frequencies. For this example:
 
-$$\chi^2_1  = \left[ \frac{\left( {36  - 20.26837 } \right)^2 }{20.26837 } \right]$$
+$$\chi ^2  = \left[ \frac{\left( {36  - 15.93 } \right)^2 }{15.93} \right] + \left[ \frac{\left( {9  - 29.07 } \right)^2 }{129.07} \right] +\left[ \frac{\left( {4  - 24.07 } \right)^2 }{24.07 } \right] + \left[ \frac{\left( {64  - 43.93 } \right)^2 }{43.93 } \right] = 65.05$$
 
-In all, we should calculate 16 ratios and sum them to each other. The final $\chi^2$ value should be equal to 0 in case of independence and it should increase as the relationship between the two variables increases. With R, the chi square value is provided as an output of the `summary()` method, applied to the table object.
+
+The final $\chi^2$ value should be equal to 0 in case of independence and it should increase as the relationship between the two variables increases. With R, the chi square value is provided as an output of the `summary()` method, applied to the table object.
 
 ```{r}
-data(HairEyeColor)
-tab <- HairEyeColor[,,2]
+tab <- as.table(matrix(c(36, 9, 4, 64), 2, 2, byrow = TRUE))
 summary(tab)
 ```
 
-The resulting value is 106.66 and it suggests that the two variables are not independent. In order to get a better appriciation of the extend of dependency, we can compare the chi square value with its maximum allawable value, which is:
+The $\chi^2$ value needs to be compared with its maximum allawable value, which is:
 
 $$\max \left( \chi ^2 \right)  = n \cdot \min (r - 1,\,c - 1)$$
 
-i.e. the product between the number of subjects ($n$) and the minimum value between the number of rows minus one and the number of columns minus one (in our case, it is $313 \times 3 = 939$).
-
-The square root of the ratio between the observed chi square value and the maximum value is know as the Cramer's V coefficient and it is more understandable than the chi square, as it is always included between 0 and 1.
+i.e. the product between the number of subjects ($n$) and the minimum value between the number of rows minus one and the number of columns minus one (in our case, it is $113 \times 1 = 113$). This suggests that the two variables are not independent. The square root of the ratio between the observed chi square value and the maximum value is know as the Cramer's V coefficient and it is more understandable than the chi square, as it is always included between 0 and 1.
 
 ```{r}
 Vcram <- sqrt(summary(tab)$statistic/(sum(tab) * min(nrow(tab) - 1, ncol(tab) - 1)))
