@@ -1,6 +1,8 @@
 # Describing the Observations
 
-## Describing nominal data
+In the main book, we mainly dealt with quantitative variables, which are by far the most common type of variable in agricultural field research. However, we are also likely to encounter nominal and ordinal variables in our research work, so it may be useful to have a basic understanding of how to analyse them.
+
+## Describing nominal/ordinal data
 
 Nominal data are produced by assigning the subjects to one of a set of categories, such as dead/alive, germinated/ungerminated, red/blue/green, and so on. For this data, especially when the number of categories is higher than two, the statistics described in book Chapter 3 cannot be used and different approaches need to be sought for their description.
 
@@ -28,7 +30,7 @@ The **relative frequencies** are obtained by dividing the absolute frequencies b
 table(mtcars$vs)/length(mtcars$vs)
 ```
 
-If we consider a variable where the classes can be logically ordered, we can also calculate the **cumulative frequencies**, by summing up the frequency for one class with the frequencies for all previous classes. As an example we take the 'gear' variable in the 'mtcars' dataset, showing the number of forward gears for each car. We can easily see that 15 cars have 3 gears and 27 cars have 4 gears or less. In R, cumulative sums can be calculated by using the `cumsum()` function, as shown in the box below.
+If we consider a variable where the classes can be logically ordered (ordinal data), we can also calculate the **cumulative frequencies**, by summing up the frequency for one class with the frequencies for all previous classes. As an example we take the 'gear' variable in the 'mtcars' dataset, showing the number of forward gears for each car. We can easily see that 15 cars have 3 gears and 27 cars have 4 gears or less. In R, cumulative sums can be calculated by using the `cumsum()` function, as shown in the box below.
 
 
 ```{r}
@@ -37,7 +39,7 @@ cumsum(table(mtcars$gear))
 
 ## Binning/Bucketing
 
-In some circumstances, it may be convenient to 'bin' a continuous variable into a set of intervals. For example, if we have recorded the ages of a big group of people, we can divide the scale into intervals of five years (e.g., from 10 to 15, from 15 to 20 and so on) and, eventually, assign each individual to the appropriate age class. Such a technique is called **binning** or **bucketing**.
+In some circumstances, it may be convenient to 'bin' a continuous variable into a set of intervals  as we have already mentioned in Section 3.8.3 of the main book. For example, if we have recorded the ages of a big group of people, we can divide the scale into intervals of five years (e.g., from 10 to 15, from 15 to 20 and so on) and, eventually, assign each individual to the appropriate age class. Such a technique is called **binning** or **bucketing**.
 
 As an example, we can consider the 'co2' dataset, that is included in the base R installation. It contains 468 values of CO_2_ atmospheric concentrations, expressed in parts per million, as observed at monthly intervals in the US. With such a big dataset, the mean and standard deviation are not sufficient to get a good feel for the data and it would be important to have an idea of the shape of the dataset. Therefore we can split the continuous scale into a series of intervals, from 310 ppm to 370 ppm, with breaks every 10 ppm and count the observations in each interval. In the box below, the function `cut()` assigns each value to the corresponding interval (please note the 'breaks' argument, which sets the margins of each interval. Intervals are, by default, left open and right-closed), while the function `table()` calculates the frequencies.
 
@@ -74,7 +76,7 @@ while the deviance is:
 
 $$SS = 15 \times (3 - 3.6875)^2 + 12 \times (4 - 3.6875)^2 + 5 \times (5 - 3.l875)^2 = 16.875$$
 
-With interval data (binned data), descriptive statistics should be calculated by using the raw data, if they are available. If they are not,  we can use the frequency distribution obtained from binning, by assigning to each individual the central value of the interval class to which it belongs. As an example, we can consider the distribution of frequencies in Table 3.3, relating to the time (in minutes) taken to complete a statistic assignment for a group of students in biotechnology. We can see that the mean is equal to:
+With binned data (interval data), descriptive statistics should be calculated by using the raw data, if they are available. If they are not,  we can use the frequency distribution obtained from binning, by assigning to each individual the central value of the interval class to which it belongs (mid-point imputation). As an example, we can consider the distribution of frequencies in Table 3.3, relating to the time (in minutes) taken to complete a statistic assignment for a group of students in biotechnology. We can see that the mean is equal to:
 
 $$\frac{7.5 \times 1 + 12.5 \times 4 + 17.5 \times 3 + 22.5 \times 2}{10} = 15.5$$
 
@@ -88,11 +90,11 @@ knitr::kable(tab, caption = "Distribution of frequency for the time (in minutes)
 ```
 
 
-The calculation of the deviance is left as an exercise.
+The deviance can be calculated in a similar way and this is left to the readers as an exercise.
 
 ## Graphical representations of nominal data
 
-A distribution of frequency can be represented by using a barplot, as described in the main book. It can also be represented by using a 'pie' chart, drawn with `ggplot`. The coding consists of producing a bar chart with stacked segments and rotating the coordinate system, as shown in the box below.
+A distribution of frequency can be represented by using a barplot/histogtram, as described in the main book. It can also be represented by using a 'pie' chart; with 'ggplot()', we need to produce a bar chart with stacked segments and rotate the coordinate system, as shown in the box below.
 
 
 ```{r}

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -76,10 +76,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3220129d1b0bfa0f6b9dc9ac11d00f8b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -274,7 +274,7 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#describing-nominal-data" id="toc-describing-nominal-data" class="nav-link active" data-scroll-target="#describing-nominal-data"><span class="header-section-number">3.1</span> Describing nominal data</a></li>
+  <li><a href="#describing-nominalordinal-data" id="toc-describing-nominalordinal-data" class="nav-link active" data-scroll-target="#describing-nominalordinal-data"><span class="header-section-number">3.1</span> Describing nominal/ordinal data</a></li>
   <li><a href="#binningbucketing" id="toc-binningbucketing" class="nav-link" data-scroll-target="#binningbucketing"><span class="header-section-number">3.2</span> Binning/Bucketing</a></li>
   <li><a href="#descriptive-stats-for-distributions-of-frequencies" id="toc-descriptive-stats-for-distributions-of-frequencies" class="nav-link" data-scroll-target="#descriptive-stats-for-distributions-of-frequencies"><span class="header-section-number">3.3</span> Descriptive stats for distributions of frequencies</a></li>
   <li><a href="#graphical-representations-of-nominal-data" id="toc-graphical-representations-of-nominal-data" class="nav-link" data-scroll-target="#graphical-representations-of-nominal-data"><span class="header-section-number">3.4</span> Graphical representations of nominal data</a></li>
@@ -308,8 +308,9 @@ window.Quarto = {
 </header>
 
 
-<section id="describing-nominal-data" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="describing-nominal-data"><span class="header-section-number">3.1</span> Describing nominal data</h2>
+<p>In the main book, we mainly dealt with quantitative variables, which are by far the most common type of variable in agricultural field research. However, we are also likely to encounter nominal and ordinal variables in our research work, so it may be useful to have a basic understanding of how to analyse them.</p>
+<section id="describing-nominalordinal-data" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="describing-nominalordinal-data"><span class="header-section-number">3.1</span> Describing nominal/ordinal data</h2>
 <p>Nominal data are produced by assigning the subjects to one of a set of categories, such as dead/alive, germinated/ungerminated, red/blue/green, and so on. For this data, especially when the number of categories is higher than two, the statistics described in book Chapter 3 cannot be used and different approaches need to be sought for their description.</p>
 <p>The most widespread technique is to derive <strong>absolute frequencies</strong>, that are the counts of individuals in each category; by doing so, a <strong>distribution of frequencies</strong> is built.</p>
 <p>As an example of nominal data we can take the ‘mtcars’ dataset, that was extracted from the 1974 Motor Trend US magazine and comprises 32 old automobiles. The dataset is available in R and we show part of it in table 3.2.</p>
@@ -492,59 +493,46 @@ window.Quarto = {
 <p>The variable ‘vs’ in ‘mtcars’ takes the values 0 for V-shaped engine and 1 for straight engine. Obviously, the two values 0 and 1 are just used to name the two categories and the resulting variable is purely nominal. The absolute frequencies of cars in the two categories are, respectively 18 and 14 and they are easily obtained by a counting process. In R, these absolute frequencies can be obtained by the <code>table()</code> function, as we show in the box below.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(mtcars)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(mtcars<span class="sc">$</span>vs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
- 0  1 
-18 14 </code></pre>
-</div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(mtcars<span class="sc">$</span>vs)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="do">##  0  1 </span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="do">## 18 14</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The <strong>relative frequencies</strong> are obtained by dividing the absolute frequencies by the total number of observations. These frequencies are, respectively, 0.5625 and 0.4375 and, in R, they can be obtained by the joint usage of the <code>table()</code> and <code>length()</code> functions, where this latter returns the number of values in a vector.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(mtcars<span class="sc">$</span>vs)<span class="sc">/</span><span class="fu">length</span>(mtcars<span class="sc">$</span>vs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-     0      1 
-0.5625 0.4375 </code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(mtcars<span class="sc">$</span>vs)<span class="sc">/</span><span class="fu">length</span>(mtcars<span class="sc">$</span>vs)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="do">##      0      1 </span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="do">## 0.5625 0.4375</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</div>
-<p>If we consider a variable where the classes can be logically ordered, we can also calculate the <strong>cumulative frequencies</strong>, by summing up the frequency for one class with the frequencies for all previous classes. As an example we take the ‘gear’ variable in the ‘mtcars’ dataset, showing the number of forward gears for each car. We can easily see that 15 cars have 3 gears and 27 cars have 4 gears or less. In R, cumulative sums can be calculated by using the <code>cumsum()</code> function, as shown in the box below.</p>
+<p>If we consider a variable where the classes can be logically ordered (ordinal data), we can also calculate the <strong>cumulative frequencies</strong>, by summing up the frequency for one class with the frequencies for all previous classes. As an example we take the ‘gear’ variable in the ‘mtcars’ dataset, showing the number of forward gears for each car. We can easily see that 15 cars have 3 gears and 27 cars have 4 gears or less. In R, cumulative sums can be calculated by using the <code>cumsum()</code> function, as shown in the box below.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cumsum</span>(<span class="fu">table</span>(mtcars<span class="sc">$</span>gear))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> 3  4  5 
-15 27 32 </code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cumsum</span>(<span class="fu">table</span>(mtcars<span class="sc">$</span>gear))</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="do">##  3  4  5 </span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="do">## 15 27 32</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="binningbucketing" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="binningbucketing"><span class="header-section-number">3.2</span> Binning/Bucketing</h2>
-<p>In some circumstances, it may be convenient to ‘bin’ a continuous variable into a set of intervals. For example, if we have recorded the ages of a big group of people, we can divide the scale into intervals of five years (e.g., from 10 to 15, from 15 to 20 and so on) and, eventually, assign each individual to the appropriate age class. Such a technique is called <strong>binning</strong> or <strong>bucketing</strong>.</p>
+<p>In some circumstances, it may be convenient to ‘bin’ a continuous variable into a set of intervals as we have already mentioned in Section 3.8.3 of the main book. For example, if we have recorded the ages of a big group of people, we can divide the scale into intervals of five years (e.g., from 10 to 15, from 15 to 20 and so on) and, eventually, assign each individual to the appropriate age class. Such a technique is called <strong>binning</strong> or <strong>bucketing</strong>.</p>
 <p>As an example, we can consider the ‘co2’ dataset, that is included in the base R installation. It contains 468 values of CO_2_ atmospheric concentrations, expressed in parts per million, as observed at monthly intervals in the US. With such a big dataset, the mean and standard deviation are not sufficient to get a good feel for the data and it would be important to have an idea of the shape of the dataset. Therefore we can split the continuous scale into a series of intervals, from 310 ppm to 370 ppm, with breaks every 10 ppm and count the observations in each interval. In the box below, the function <code>cut()</code> assigns each value to the corresponding interval (please note the ‘breaks’ argument, which sets the margins of each interval. Intervals are, by default, left open and right-closed), while the function <code>table()</code> calculates the frequencies.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(co2)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>co2 <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(co2)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(co2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 337.0535</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(co2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 313.18</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(co2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 366.84</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># binning</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>classes <span class="ot">&lt;-</span> <span class="fu">cut</span>(co2, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">310</span>,<span class="dv">320</span>,<span class="dv">330</span>,<span class="dv">340</span>,<span class="dv">350</span>,<span class="dv">360</span>,<span class="dv">370</span>))</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>freq <span class="ot">&lt;-</span> <span class="fu">table</span>(classes)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>freq</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>classes
-(310,320] (320,330] (330,340] (340,350] (350,360] (360,370] 
-       70       117        86        76        86        33 </code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(co2)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>co2 <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(co2)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(co2)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 337.0535</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(co2)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 313.18</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(co2)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 366.84</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># binning</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>classes <span class="ot">&lt;-</span> <span class="fu">cut</span>(co2, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">310</span>,<span class="dv">320</span>,<span class="dv">330</span>,<span class="dv">340</span>,<span class="dv">350</span>,<span class="dv">360</span>,<span class="dv">370</span>))</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>freq <span class="ot">&lt;-</span> <span class="fu">table</span>(classes)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>freq</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="do">## classes</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="do">## (310,320] (320,330] (330,340] (340,350] (350,360] (360,370] </span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="do">##        70       117        86        76        86        33</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="descriptive-stats-for-distributions-of-frequencies" class="level2" data-number="3.3">
@@ -557,7 +545,7 @@ window.Quarto = {
 <p><span class="math display">\[\frac{ 15 \times 3 + 12 \times 4 + 5 \times 5}{15 + 12 + 5} = 3.6875\]</span></p>
 <p>while the deviance is:</p>
 <p><span class="math display">\[SS = 15 \times (3 - 3.6875)^2 + 12 \times (4 - 3.6875)^2 + 5 \times (5 - 3.l875)^2 = 16.875\]</span></p>
-<p>With interval data (binned data), descriptive statistics should be calculated by using the raw data, if they are available. If they are not, we can use the frequency distribution obtained from binning, by assigning to each individual the central value of the interval class to which it belongs. As an example, we can consider the distribution of frequencies in Table 3.3, relating to the time (in minutes) taken to complete a statistic assignment for a group of students in biotechnology. We can see that the mean is equal to:</p>
+<p>With binned data (interval data), descriptive statistics should be calculated by using the raw data, if they are available. If they are not, we can use the frequency distribution obtained from binning, by assigning to each individual the central value of the interval class to which it belongs (mid-point imputation). As an example, we can consider the distribution of frequencies in Table 3.3, relating to the time (in minutes) taken to complete a statistic assignment for a group of students in biotechnology. We can see that the mean is equal to:</p>
 <p><span class="math display">\[\frac{7.5 \times 1 + 12.5 \times 4 + 17.5 \times 3 + 22.5 \times 2}{10} = 15.5\]</span></p>
 <div class="cell">
 <div class="cell-output-display">
@@ -595,20 +583,20 @@ window.Quarto = {
 </table>
 </div>
 </div>
-<p>The calculation of the deviance is left as an exercise.</p>
+<p>The deviance can be calculated in a similar way and this is left to the readers as an exercise.</p>
 </section>
 <section id="graphical-representations-of-nominal-data" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="graphical-representations-of-nominal-data"><span class="header-section-number">3.4</span> Graphical representations of nominal data</h2>
-<p>A distribution of frequency can be represented by using a barplot, as described in the main book. It can also be represented by using a ‘pie’ chart, drawn with <code>ggplot</code>. The coding consists of producing a bar chart with stacked segments and rotating the coordinate system, as shown in the box below.</p>
+<p>A distribution of frequency can be represented by using a barplot/histogtram, as described in the main book. It can also be represented by using a ‘pie’ chart; with ‘ggplot()’, we need to produce a bar chart with stacked segments and rotate the coordinate system, as shown in the box below.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>dfr <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="st">"Class"</span> <span class="ot">=</span> <span class="fu">names</span>(freq),</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Freq"</span> <span class="ot">=</span> <span class="fu">as.numeric</span>(freq))</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dfr) <span class="sc">+</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="cn">NA</span>, <span class="at">y =</span> Freq, <span class="at">fill =</span> Class),</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">stat=</span><span class="st">"identity"</span>, <span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="st">"y"</span>, <span class="at">start=</span><span class="dv">0</span>) <span class="sc">+</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="co"># remove background, grid, numeric labels</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>dfr <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="st">"Class"</span> <span class="ot">=</span> <span class="fu">names</span>(freq),</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Freq"</span> <span class="ot">=</span> <span class="fu">as.numeric</span>(freq))</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dfr) <span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="cn">NA</span>, <span class="at">y =</span> Freq, <span class="at">fill =</span> Class),</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">stat=</span><span class="st">"identity"</span>, <span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="st">"y"</span>, <span class="at">start=</span><span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="co"># remove background, grid, numeric labels</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -622,13 +610,11 @@ window.Quarto = {
 <h2 data-number="3.5" class="anchored" data-anchor-id="contingency-tables"><span class="header-section-number">3.5</span> Contingency tables</h2>
 <p>When we have more than one cataegorical variable, we can summarise the distribution of frequency by using two-way tables, usually known as <strong>contingency tables</strong> or crosstabs. These tables can be created by providing two or more vectors as arguments to the <code>table()</code> function; it is important to keep in mind that, even if the resulting table may resamble a matrix or a data.frame, a contingency table represents a peculiar class in R, with several specific methods, that we will explore later. The box below shows a contingency table that shows the cross tabulation for ‘gear’ and ‘vs’ in ‘mtcars’.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(mtcars<span class="sc">$</span>vs, mtcars<span class="sc">$</span>gear)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   
-     3  4  5
-  0 12  2  4
-  1  3 10  1</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(mtcars<span class="sc">$</span>vs, mtcars<span class="sc">$</span>gear)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="do">##    </span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="do">##      3  4  5</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="do">##   0 12  2  4</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="do">##   1  3 10  1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Another interesting table is contained in the ‘datasets’ package and is named ‘HairEyeColor’. It shows the distribution of hair and eye color in 592 statistics students, depending on sex; both characters are expressed in four classes, i.e.&nbsp;black, brown, red and blond hair and brown, blue, hazel and green eyes. Considering females, the contingency table is reported in the following table and it is augmented with row and column sums (see later).</p>
 <div class="cell">
@@ -750,24 +736,20 @@ window.Quarto = {
 <p><span class="math display">\[\chi ^2  = \left[ \frac{\left( {36  - 15.93 } \right)^2 }{15.93} \right] + \left[ \frac{\left( {9  - 29.07 } \right)^2 }{129.07} \right] +\left[ \frac{\left( {4  - 24.07 } \right)^2 }{24.07 } \right] + \left[ \frac{\left( {64  - 43.93 } \right)^2 }{43.93 } \right] = 65.05\]</span></p>
 <p>The final <span class="math inline">\(\chi^2\)</span> value should be equal to 0 in case of independence and it should increase as the relationship between the two variables increases. With R, the chi square value is provided as an output of the <code>summary()</code> method, applied to the table object.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">as.table</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">36</span>, <span class="dv">9</span>, <span class="dv">4</span>, <span class="dv">64</span>), <span class="dv">2</span>, <span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(tab)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Number of cases in table: 113 
-Number of factors: 2 
-Test for independence of all factors:
-    Chisq = 65.05, df = 1, p-value = 7.295e-16</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">as.table</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">36</span>, <span class="dv">9</span>, <span class="dv">4</span>, <span class="dv">64</span>), <span class="dv">2</span>, <span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(tab)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Number of cases in table: 113 </span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Number of factors: 2 </span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Test for independence of all factors:</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="do">##  Chisq = 65.05, df = 1, p-value = 7.295e-16</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The <span class="math inline">\(\chi^2\)</span> value needs to be compared with its maximum allawable value, which is:</p>
 <p><span class="math display">\[\max \left( \chi ^2 \right)  = n \cdot \min (r - 1,\,c - 1)\]</span></p>
 <p>i.e.&nbsp;the product between the number of subjects (<span class="math inline">\(n\)</span>) and the minimum value between the number of rows minus one and the number of columns minus one (in our case, it is <span class="math inline">\(113 \times 1 = 113\)</span>). This suggests that the two variables are not independent. The square root of the ratio between the observed chi square value and the maximum value is know as the Cramer’s V coefficient and it is more understandable than the chi square, as it is always included between 0 and 1.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>Vcram <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="fu">summary</span>(tab)<span class="sc">$</span>statistic<span class="sc">/</span>(<span class="fu">sum</span>(tab) <span class="sc">*</span> <span class="fu">min</span>(<span class="fu">nrow</span>(tab) <span class="sc">-</span> <span class="dv">1</span>, <span class="fu">ncol</span>(tab) <span class="sc">-</span> <span class="dv">1</span>)))</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>Vcram</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.7587364</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Vcram <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="fu">summary</span>(tab)<span class="sc">$</span>statistic<span class="sc">/</span>(<span class="fu">sum</span>(tab) <span class="sc">*</span> <span class="fu">min</span>(<span class="fu">nrow</span>(tab) <span class="sc">-</span> <span class="dv">1</span>, <span class="fu">ncol</span>(tab) <span class="sc">-</span> <span class="dv">1</span>)))</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>Vcram</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 0.7587364</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
